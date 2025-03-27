@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightDocs | Ashish Kharbanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="../css/vectors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">AK</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-header">
+                    <h1>InsightDocs</h1>
+                    <div class="project-meta">
+                        <div class="project-category">
+                            <i class="fas fa-folder"></i>
+                            <span>AI / Document Management</span>
+                        </div>
+                        <div class="project-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>2023</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="http://13.60.81.45/showcase/" class="btn primary" target="_blank">
+                            <i class="fas fa-globe"></i>
+                            Demo
+                        </a>
+                        <a href="http://13.60.81.45/admin" class="btn secondary" target="_blank">
+                            <i class="fas fa-rocket"></i>
+                            Live App
+                        </a>
+                    </div>
+                </div>
+                <div class="project-banner">
+                    <div class="insightdocs-vector" style="height: 400px;">
+                        <div class="doc-container">
+                            <div class="document">
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                                <div class="line line-4"></div>
+                                <div class="line line-5"></div>
+                            </div>
+                            <div class="arrow"></div>
+                            <div class="document">
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                                <div class="line line-4"></div>
+                                <div class="line line-5"></div>
+                            </div>
+                        </div>
+                        <div class="brain"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="project-content">
+            <div class="container">
+                <div class="project-description">
+                    <h2>Project Overview</h2>
+                    <p>InsightDocs is an intelligent document management and QA system that allows organizations to upload their documents and interact with them through a natural language interface. The system uses advanced RAG (Retrieval Augmented Generation) techniques to provide accurate answers based on the content of uploaded documents.</p>
+                    
+                    <h2>Key Features</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>No-Code RAG Platform</h3>
+                                <p>Allows non-technical users to create custom document-based chatbots without programming knowledge</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Multiple LLM Integration</h3>
+                                <p>Supports various LLM providers including OpenAI, OpenRouter, and Ollama with flexible model switching</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Advanced Vector Search</h3>
+                                <p>Engineered vector database using FAISS and pgvector for optimized semantic search with 30%+ improved retrieval precision</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Secure Authentication</h3>
+                                <p>Implemented multi-tier authentication via Google OAuth and role-based access control</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Analytics Dashboard</h3>
+                                <p>Real-time analytics for fine-tuning RAG parameters across multiple dimensions</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Optimized Performance</h3>
+                                <p>Intelligent caching, token tracking, and query optimization, reducing API costs by 42% while maintaining response quality</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h2>Technical Implementation</h2>
+                    <div class="tech-stack">
+                        <div class="tech-category">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li>React.js</li>
+                                <li>Tailwind CSS</li>
+                                <li>Chart.js</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Backend</h3>
+                            <ul>
+                                <li>Python (Flask)</li>
+                                <li>PostgreSQL</li>
+                                <li>pgvector</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>AI/ML</h3>
+                            <ul>
+                                <li>OpenAI API</li>
+                                <li>FAISS</li>
+                                <li>Sentence Transformers</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>DevOps</h3>
+                            <ul>
+                                <li>Docker</li>
+                                <li>AWS EC2</li>
+                                <li>Nginx</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Architecture</h2>
+                    <div class="architecture">
+                        <p>The system follows a modular architecture with these key components:</p>
+                        <ol>
+                            <li><strong>Document Processing Pipeline:</strong> Handles document upload, text extraction, and chunk generation with semantic awareness</li>
+                            <li><strong>Vector Database:</strong> Stores and indexes document embeddings for similarity search</li>
+                            <li><strong>LLM Interface:</strong> Provides unified access to multiple language models</li>
+                            <li><strong>RAG Engine:</strong> Combines retrieval results with language model generation</li>
+                            <li><strong>Authentication Layer:</strong> Manages user access and permissions</li>
+                            <li><strong>Analytics Module:</strong> Tracks usage and performance metrics</li>
+                        </ol>
+                    </div>
+
+                    <h2>Challenges & Solutions</h2>
+                    <div class="challenges">
+                        <div class="challenge-item">
+                            <h3>Document Chunking Optimization</h3>
+                            <p><strong>Challenge:</strong> Finding the optimal chunk size and overlap for different document types</p>
+                            <p><strong>Solution:</strong> Implemented dynamic chunking strategies that adapt based on document semantics rather than fixed token counts</p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Query Precision</h3>
+                            <p><strong>Challenge:</strong> Improving relevance of retrieved context for complex queries</p>
+                            <p><strong>Solution:</strong> Developed hybrid retrieval combining BM25 with vector similarity and implemented Maximum Marginal Relevance to reduce redundancy</p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Cost Optimization</h3>
+                            <p><strong>Challenge:</strong> Managing API costs while maintaining high-quality responses</p>
+                            <p><strong>Solution:</strong> Implemented intelligent token tracking, response caching, and adaptive model selection based on query complexity</p>
+                        </div>
+                    </div>
+
+                    <h2>Results & Impact</h2>
+                    <div class="results">
+                        <ul>
+                            <li>42% reduction in API costs through optimization techniques</li>
+                            <li>30% improvement in retrieval precision compared to baseline approaches</li>
+                            <li>90% user satisfaction rate based on feedback from early adopters</li>
+                            <li>Successfully deployed for several organizations to manage their internal documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Technologies</h3>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>React</span>
+                            <span>PostgreSQL</span>
+                            <span>FAISS</span>
+                            <span>LLM</span>
+                            <span>pgvector</span>
+                            <span>OpenAI API</span>
+                            <span>Docker</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h3>Key Achievements</h3>
+                        <ul class="achievement-list">
+                            <li>Developed complete RAG platform from concept to deployment</li>
+                            <li>Optimized vector search capabilities for enhanced retrieval</li>
+                            <li>Reduced API costs by 42% through intelligent optimizations</li>
+                            <li>Implemented flexible model switching for cost/quality balance</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h3>Related Projects</h3>
+                        <div class="related-projects">
+                            <a href="stix-visualizer.html" class="related-project">
+                                <div class="stix-vector" style="width: 60px; height: 60px;">
+                                    <div class="node node-1" style="width: 20px; height: 20px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.7rem;">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                </div>
+                                <span>STIX2.1 Visualization Tool</span>
+                            </a>
+                            <a href="cve-dashboard.html" class="related-project">
+                                <div class="cve-vector" style="width: 60px; height: 60px;"></div>
+                                <span>CVE Analysis Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Navigation -->
+        <section class="project-navigation">
+            <div class="container">
+                <a href="simon-game.html" class="prev-project">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Previous<br>Simon Game</span>
+                </a>
+                <a href="../index.html#projects" class="all-projects">
+                    <i class="fas fa-th"></i>
+                    <span>All Projects</span>
+                </a>
+                <a href="cve-dashboard.html" class="next-project">
+                    <span>Next<br>CVE Analysis Dashboard</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Ashish Kharbanda. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ashishkhar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://medium.com/@kharbandaashish01" target="_blank"><i class="fab fa-medium"></i></a>
+                    <a href="https://github.com/ashishkhar" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html> 

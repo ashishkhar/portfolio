@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Kharbanda | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/vectors.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Circular/Cereal-like font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animation libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <!-- Theme toggle -->
+    <script>
+        // Check for saved theme preference or use device preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    <div class="page-transition"></div>
+    
+    <header class="glass-nav">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#" class="animated-logo">AK</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text" data-aos="fade-up">
+                        <span class="overline">Portfolio</span>
+                        <h1>Ashish <span class="gradient-text">Kharbanda</span></h1>
+                        <h2 class="typing-text">Cybersecurity Researcher & AI Developer</h2>
+                        <p data-aos="fade-up" data-aos-delay="200">Specializing in AI/ML for enhanced threat intelligence and security operations</p>
+                        <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                            <a href="#projects" class="btn primary btn-animated">View Projects</a>
+                            <a href="#contact" class="btn secondary btn-animated">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual" data-aos="fade-up">
+                        <div class="blob-animation">
+                            <div class="profile-vector pulse-animation">
+                                <i class="fas fa-user profile-icon"></i>
+                            </div>
+                        </div>
+                        <div class="floating-badges">
+                            <div class="badge" data-tilt><i class="fas fa-shield-alt"></i> Security</div>
+                            <div class="badge" data-tilt><i class="fas fa-brain"></i> AI</div>
+                            <div class="badge" data-tilt><i class="fas fa-code"></i> Development</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div>
+                        <span class="scroll-text">Scroll</span>
+                    </div>
+                </div>
+            </div>
+            <div class="shape-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-overline">Portfolio</span>
+                    <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+                    <p class="section-description">Explore my work in cybersecurity, AI, and development</p>
+                </div>
+                <div class="filter-buttons" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="security">Security</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                </div>
+                <div class="project-grid" data-aos="fade-up">
+                    <!-- InsightDocs Project -->
+                    <div class="project-card" data-category="ai security" data-tilt data-tilt-max="8">
+                        <div class="project-image">
+                            <a href="projects/insightdocs.html">
+                                <div class="insightdocs-vector interactive-vector">
+                                    <div class="doc-container">
+                                        <div class="document">
+                                            <div class="line line-1"></div>
+                                            <div class="line line-2"></div>
+                                            <div class="line line-3"></div>
+                                            <div class="line line-4"></div>
+                                            <div class="line line-5"></div>
+                                        </div>
+                                        <div class="arrow"></div>
+                                        <div class="document">
+                                            <div class="line line-1"></div>
+                                            <div class="line line-2"></div>
+                                            <div class="line line-3"></div>
+                                            <div class="line line-4"></div>
+                                            <div class="line line-5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="brain"></div>
+                                </div>
+                                <div class="overlay">
+                                    <span>View Project</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-category">AI / Security</span>
+                            </div>
+                            <h3><a href="projects/insightdocs.html" class="project-title">InsightDocs</a></h3>
+                            <p>An intelligent document management and QA system that allows organizations to upload their documents and interact with them through a natural language interface.</p>
+                            <div class="project-tech">
+                                <span>RAG</span>
+                                <span>NLP</span>
+                                <span>Vector DB</span>
+                                <span>LLM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="http://13.60.81.45/showcase/" class="btn sm" target="_blank">
+                                    <i class="fas fa-globe"></i> Demo
+                                </a>
+                                <a href="http://13.60.81.45/admin" class="btn sm" target="_blank">
+                                    <i class="fas fa-rocket"></i> Live App
+                                </a>
+                                <a href="projects/insightdocs.html" class="btn sm">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CVE Analysis Dashboard -->
+                    <div class="project-card" data-category="security ai" data-tilt data-tilt-max="8">
+                        <div class="project-image">
+                            <a href="projects/cve-dashboard.html">
+                                <div class="cve-vector interactive-vector">
+                                    <div class="dashboard">
+                                        <div class="dashboard-header">
+                                            <div class="dashboard-title"></div>
+                                        </div>
+                                        <div class="dashboard-body">
+                                            <div class="chart">
+                                                <div class="bar-chart">
+                                                    <div class="bar bar-1"></div>
+                                                    <div class="bar bar-2"></div>
+                                                    <div class="bar bar-3"></div>
+                                                    <div class="bar bar-4"></div>
+                                                    <div class="bar bar-5"></div>
+                                                </div>
+                                            </div>
+                                            <div class="chart">
+                                                <div class="line-chart">
+                                                    <div class="line"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overlay">
+                                    <span>View Project</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-category">Security / Data Analysis</span>
+                            </div>
+                            <h3><a href="projects/cve-dashboard.html" class="project-title">CVE Analysis Dashboard</a></h3>
+                            <p>This dashboard provides time-based analysis of CVE scores with recalculated metrics based on selected time period.</p>
+                            <div class="project-tech">
+                                <span>Data Analysis</span>
+                                <span>Streamlit</span>
+                                <span>Cybersecurity</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://ashishkhar-cve-analysis-dashboard-cve-details-jrsajx.streamlit.app" class="btn sm" target="_blank">
+                                    <i class="fas fa-chart-line"></i> Live Dashboard
+                                </a>
+                                <a href="projects/cve-dashboard.html" class="btn sm">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- STIX2.1 Visualization Tool -->
+                    <div class="project-card" data-category="security ai" data-tilt data-tilt-max="8">
+                        <div class="project-image">
+                            <a href="projects/stix-visualizer.html">
+                                <div class="stix-vector interactive-vector">
+                                    <div class="graph">
+                                        <div class="edge edge-1"></div>
+                                        <div class="edge edge-2"></div>
+                                        <div class="edge edge-3"></div>
+                                        <div class="edge edge-4"></div>
+                                        <div class="node node-1"><i class="fas fa-shield-alt"></i></div>
+                                        <div class="node node-2"><i class="fas fa-bug"></i></div>
+                                        <div class="node node-3"><i class="fas fa-user-secret"></i></div>
+                                        <div class="node node-4"><i class="fas fa-network-wired"></i></div>
+                                    </div>
+                                </div>
+                                <div class="overlay">
+                                    <span>View Project</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-category">Security / AI</span>
+                            </div>
+                            <h3><a href="projects/stix-visualizer.html" class="project-title">STIX2.1 Visualization Tool</a></h3>
+                            <p>A tool which uses NLP and LLM to parse unstructured threat intel to create editable STIX2.1 JSON.</p>
+                            <div class="project-tech">
+                                <span>NLP</span>
+                                <span>LLM</span>
+                                <span>Threat Intel</span>
+                                <span>Visualization</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://6mzene6ct2nvevulxrb4fg.streamlit.app" class="btn sm" target="_blank">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="https://www.upwork.com/services/product/development-it-ai-enhanced-cybersecurity-proactive-threat-intelligence-mitigation-1887166973370970843?ref=fl_profile" class="btn sm" target="_blank">
+                                    <i class="fas fa-shopping-cart"></i> Service
+                                </a>
+                                <a href="projects/stix-visualizer.html" class="btn sm">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simon Game -->
+                    <div class="project-card" data-category="web" data-tilt data-tilt-max="8">
+                        <div class="project-image">
+                            <a href="projects/simon-game.html">
+                                <div class="simon-vector interactive-vector">
+                                    <div class="simon-container">
+                                        <div class="simon-btn simon-green simon-sequence"></div>
+                                        <div class="simon-btn simon-red"></div>
+                                        <div class="simon-btn simon-yellow"></div>
+                                        <div class="simon-btn simon-blue"></div>
+                                        <div class="simon-center">SIMON</div>
+                                    </div>
+                                </div>
+                                <div class="overlay">
+                                    <span>View Project</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-category">Web Development</span>
+                            </div>
+                            <h3><a href="projects/simon-game.html" class="project-title">Simon Game</a></h3>
+                            <p>A web implementation of the classic Simon memory game.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>Web Development</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://ashishkhar.github.io/SIMON/" class="btn sm" target="_blank">
+                                    <i class="fas fa-gamepad"></i> Play Game
+                                </a>
+                                <a href="projects/simon-game.html" class="btn sm">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shape-divider shape-divider-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section (Resume) -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="profile-vector">
+                            <i class="fas fa-user profile-icon"></i>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Cybersecurity Researcher & AI Developer</h3>
+                        <p>Cybersecurity Researcher (MSc) with expertise in applying AI/ML to enhance threat intelligence and security operations. Built and fine-tuned LLM frameworks, achieving significant accuracy gains and efficiency improvements. Proven ability to contribute to cutting-edge research and development in AI-focused cybersecurity at scale. UK work authorization.</p>
+                        
+                        <div class="resume-section">
+                            <h4>Experience</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <h5>Cyber Security Researcher</h5>
+                                    <p class="organization">Centre for Internet Security and Artificial Intelligence</p>
+                                    <p class="period">Jan 2025 - Present</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>Threat Intelligence and Research Analyst</h5>
+                                    <p class="organization">Data Security Council of India, NASSCOM</p>
+                                    <p class="period">Jan 2023 - Jul 2023</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>Cyber Security Analyst</h5>
+                                    <p class="organization">Security Shark LLP</p>
+                                    <p class="period">Jun 2022 - Aug 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-section">
+                            <h4>Education</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <h5>MSc in Cyber Security</h5>
+                                    <p class="organization">University of Southampton</p>
+                                    <p class="period">Sep 2023 - Sep 2024</p>
+                                    <p class="achievement">Distinction, ECS prize (highest score)</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>Bachelor of Technology in Computer Science</h5>
+                                    <p class="organization">Shiv Nadar University</p>
+                                    <p class="period">Aug 2019 - May 2023</p>
+                                    <p class="achievement">Dean's List award</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h4>Skills</h4>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h5>Cybersecurity</h5>
+                                    <ul>
+                                        <li>Malware Analysis</li>
+                                        <li>Penetration Testing</li>
+                                        <li>Threat Modeling</li>
+                                        <li>MITRE ATT&CK</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h5>AI/ML</h5>
+                                    <ul>
+                                        <li>NLP</li>
+                                        <li>Deep Learning</li>
+                                        <li>LLM Fine-Tuning</li>
+                                        <li>Reinforcement Learning</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h5>Development</h5>
+                                    <ul>
+                                        <li>Python/Flask</li>
+                                        <li>JavaScript/React</li>
+                                        <li>Docker/Kubernetes</li>
+                                        <li>PostgreSQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-resume">
+                            <a href="resume.pdf" class="btn primary" download>Download Full Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:kharbandaashish01@gmail.com">kharbandaashish01@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 9811910214 / +44 7459839619</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/ashishkhar" target="_blank">linkedin.com/in/ashishkhar</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-medium"></i>
+                            <div>
+                                <h4>Blog</h4>
+                                <a href="https://medium.com/@kharbandaashish01" target="_blank">medium.com/@kharbandaashish01</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info" data-aos="fade-right">
+                    <div class="footer-logo">AK</div>
+                    <p>&copy; 2024 Ashish Kharbanda. All rights reserved.</p>
+                </div>
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ashishkhar" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://medium.com/@kharbandaashish01" target="_blank" class="social-link" aria-label="Medium">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                        <a href="https://github.com/ashishkhar" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="back-to-top" data-aos="fade-left" data-aos-delay="200">
+                    <a href="#home" aria-label="Back to top">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/kursor"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Failsafe for loading overlay -->
+    <script>
+        // Ensure loading overlay is hidden
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const loadingOverlay = document.querySelector('.loading-overlay');
+                if (loadingOverlay) {
+                    loadingOverlay.style.opacity = '0';
+                    loadingOverlay.style.visibility = 'hidden';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIX2.1 Visualization Tool | Ashish Kharbanda</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/project-detail.css" type="text/css">
+    <link rel="stylesheet" href="../css/vectors.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">AK</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-header">
+                    <h1>STIX2.1 Visualization Tool</h1>
+                    <div class="project-meta">
+                        <div class="project-category">
+                            <i class="fas fa-folder"></i>
+                            <span>Cybersecurity / Data Visualization</span>
+                        </div>
+                        <div class="project-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>2021</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ashishkhar" class="btn primary" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://6mzene6ct2nvevulxrb4fg.streamlit.app" class="btn secondary" target="_blank">
+                            <i class="fas fa-eye"></i>
+                            Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="project-banner">
+                    <div class="stix-vector" style="height: 400px;">
+                        <div class="node node-1">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="node node-2">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="node node-3">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                        <div class="node node-4">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="node node-5">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="edge edge-1-2"></div>
+                        <div class="edge edge-2-3"></div>
+                        <div class="edge edge-3-4"></div>
+                        <div class="edge edge-3-5"></div>
+                        <div class="edge edge-1-5"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="project-content">
+            <div class="container">
+                <div class="project-description">
+                    <h2>Project Overview</h2>
+                    <p>The STIX2.1 Visualization Tool is an interactive web application for security analysts to visualize and analyze STIX (Structured Threat Information eXpression) data. This tool transforms complex threat intelligence expressed in STIX 2.1 format into intuitive graph visualizations, enabling analysts to better understand threat actor tactics, techniques, and relationships between cyber threat entities.</p>
+                    
+                    <h2>Key Features</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Interactive Graph Visualization</h3>
+                                <p>Dynamic force-directed graph layout with zoom, pan, and focus capabilities</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Full STIX 2.1 Support</h3>
+                                <p>Comprehensive implementation of all STIX 2.1 domain objects and relationship types</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Advanced Filtering</h3>
+                                <p>Multi-level filtering by object types, relationships, time range, and confidence levels</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Pattern Analysis</h3>
+                                <p>Automated identification of common attack patterns and relationship clusters</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Temporal Analysis</h3>
+                                <p>Timeline view showing evolution of threat activities and relationships over time</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h3>Export & Collaboration</h3>
+                                <p>Export visualizations as images or interactive HTML, with annotation and sharing capabilities</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h2>Technical Implementation</h2>
+                    <div class="tech-stack">
+                        <div class="tech-category">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li>React.js</li>
+                                <li>D3.js</li>
+                                <li>Material-UI</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Backend</h3>
+                            <ul>
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>MongoDB</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>Data Processing</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>NetworkX</li>
+                                <li>STIX2 Library</li>
+                            </ul>
+                        </div>
+                        <div class="tech-category">
+                            <h3>DevOps</h3>
+                            <ul>
+                                <li>Docker</li>
+                                <li>GitHub Actions</li>
+                                <li>AWS</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Architecture</h2>
+                    <div class="architecture">
+                        <p>The system follows a microservices architecture with these key components:</p>
+                        <ol>
+                            <li><strong>STIX Parser Service:</strong> Validates and processes STIX 2.1 JSON documents</li>
+                            <li><strong>Graph Database:</strong> Stores parsed STIX objects and relationships in optimized graph structure</li>
+                            <li><strong>Analytics Engine:</strong> Performs pattern identification and relationship analysis</li>
+                            <li><strong>Visualization Engine:</strong> Renders interactive graph visualizations using D3.js</li>
+                            <li><strong>Export Service:</strong> Generates sharable visualization outputs in various formats</li>
+                            <li><strong>Authentication Layer:</strong> Manages user access and secures sensitive threat intelligence</li>
+                        </ol>
+                    </div>
+
+                    <h2>Challenges & Solutions</h2>
+                    <div class="challenges">
+                        <div class="challenge-item">
+                            <h3>Graph Performance</h3>
+                            <p><strong>Challenge:</strong> Maintaining interactive performance with large STIX datasets (1000+ nodes)</p>
+                            <p><strong>Solution:</strong> Implemented WebGL-based rendering for large graphs and developed level-of-detail techniques to simplify visualization at different zoom levels</p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Complex Relationships</h3>
+                            <p><strong>Challenge:</strong> Clearly visualizing complex many-to-many relationships between STIX objects</p>
+                            <p><strong>Solution:</strong> Developed custom edge bundling algorithm and contextual highlighting to emphasize relevant relationships</p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>STIX Specification Evolution</h3>
+                            <p><strong>Challenge:</strong> Adapting to evolving STIX specification and maintaining backward compatibility</p>
+                            <p><strong>Solution:</strong> Created adapter layer for different STIX versions and implemented validation pipeline to ensure spec compliance</p>
+                        </div>
+                    </div>
+
+                    <h2>Results & Impact</h2>
+                    <div class="results">
+                        <ul>
+                            <li>Reduced threat analysis time by 60% compared to manual STIX JSON parsing</li>
+                            <li>Improved threat intelligence sharing and collaboration among security teams</li>
+                            <li>Enhanced understanding of complex threat actor behaviors and attack patterns</li>
+                            <li>Adopted by multiple organizations for threat intelligence analysis and sharing</li>
+                        </ul>
+                    </div>
+
+                    <div class="coming-soon">
+                        <h3>Coming Next: STIX 2.2 Support</h3>
+                        <p>We're currently implementing support for the upcoming STIX 2.2 specification, including new object types and relationship models. Stay tuned for updates!</p>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Technologies</h3>
+                        <div class="tech-tags">
+                            <span>React.js</span>
+                            <span>D3.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Python</span>
+                            <span>STIX 2.1</span>
+                            <span>Docker</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h3>Key Achievements</h3>
+                        <ul class="achievement-list">
+                            <li>Built first fully-compliant STIX 2.1 visualization platform</li>
+                            <li>Developed high-performance graph rendering for 1000+ nodes</li>
+                            <li>Created intuitive interface for complex threat intelligence data</li>
+                            <li>Reduced threat analysis time by 60%</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h3>Related Projects</h3>
+                        <div class="related-projects">
+                            <a href="cve-dashboard.html" class="related-project">
+                                <div class="cve-vector" style="width: 60px; height: 60px;"></div>
+                                <span>CVE Analysis Dashboard</span>
+                            </a>
+                            <a href="insightdocs.html" class="related-project">
+                                <div class="insightdocs-vector" style="width: 60px; height: 60px;">
+                                    <div class="doc-container" style="transform: scale(0.4); top: 20px; left: 7px;"></div>
+                                    <div class="brain" style="transform: scale(0.4); top: 20px; left: 20px;"></div>
+                                </div>
+                                <span>InsightDocs</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Navigation -->
+        <section class="project-navigation">
+            <div class="container">
+                <a href="cve-dashboard.html" class="prev-project">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Previous<br>CVE Analysis Dashboard</span>
+                </a>
+                <a href="../index.html#projects" class="all-projects">
+                    <i class="fas fa-th"></i>
+                    <span>All Projects</span>
+                </a>
+                <a href="simon-game.html" class="next-project">
+                    <span>Next<br>Simon Game</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Ashish Kharbanda. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ashishkhar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://medium.com/@kharbandaashish01" target="_blank"><i class="fab fa-medium"></i></a>
+                    <a href="https://github.com/ashishkhar" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html> 
