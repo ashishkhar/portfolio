@@ -1,0 +1,70 @@
+Ashish Kharbanda
+Email: kharbandaashish01@gmail.com | LinkedIn: https://www.linkedin.com/in/ashishkhar
+ 
+SUMMARY 
+Cybersecurity Researcher (MSc) with expertise in applying AI/ML to enhance threat intelligence and security operations. Built and fine-tuned LLM frameworks, achieving significant accuracy gains and efficiency improvements. Proven ability to contribute to cutting-edge research and development in AI-focused cybersecurity at scale. UK work authorization. 
+
+EDUCATION 
+University of Southampton | Distinction, ECS prize(highest score)	Sep 2023 – Sep 2024	 
+MSc in Cyber Security 
+Dissertation: Fine-Tuning LLaMA 3.1 LLM for Enhanced Cyber Threat Intelligence: Integrating NLP, LLM, OSINT Automation, and developing an Interactive GUI for Real-Time Threat Detection and Analysis. 
+
+Shiv Nadar University | Dean's List award	Aug 2019 – May 2023
+Bachelor of Technology in Computer Science (Specialization  in Cyber Security and Privacy)
+Dissertation: Analyzed and replicated Rasta-Mouse C&C server, reverse-engineered payloads, and developed mitigation strategies for enhanced cybersecurity defence.
+
+WORK EXPERIENCE 
+Centre for Internet Security and Artificial Intelligence 	Jan 2025 – Present
+Cyber Security Researcher 	Delhi, India
+•	Led the AI R&D division, spearheading the development of a novel threat mitigation framework using advanced NLP and LLMs, resulting in a 30% faster threat adaptation.
+•	Architected and implemented an AI-driven CVE Scoring System, improving prioritization accuracy by 40%.
+•	Engineered the integration of the AI-CVE scoring system with SIEM, SOAR, NDR, and EDR platforms, achieving a 60% reduction in incident response time.
+•	Scaled AI systems to efficiently process over 100 million data points monthly in real-time, leveraging ML models for NDR/MDR data classification to identify anomalies and reduce SOC workload.
+•	Contributed significantly to the enhancement of SIEM solutions, implementing critical changes to improve threat detection and analysis capabilities.
+
+Data Security Council of India, NASSCOM 	January 2023 - July 2023  
+Threat Intelligence and Research Analyst  	Delhi, India
+•	Managed Cyware Situational Awareness Platform, collaborating with stakeholders to exchange and manage 1000+ alerts.
+•	Published 10+ advisories to enhance threat intelligence, malware research,  threat hunting, and active cyber defence capabilities. Infiltrated Anonymous Sudan(Social engineering). 
+•	Reverse-engineered 10+ malware samples using Ghidra, x32/x64dbg, ProcMon, Process Hacker, RegShot, TrIDNET, AutoIt, FakeNet, Wireshark and ProcDOT extracting  IOCs. 
+•	Discovered zero-day RCE vulnerability in IoT devices, leading to security patches affecting 50,000+ devices.
+
+Security Shark LLP 	June 2022 - August 2022  
+Cyber Security Analyst  	Delhi, India
+•	Performed 15+ security assessments and 50+ penetration tests to identify vulnerabilities. 
+•	Enhanced real-world penetration skills through VulnHub challenges and created 20+ detailed walkthroughs on Cherrytree. 
+•	Led knowledge-sharing sessions on complex security topics to foster collaboration and learning. 
+
+PROJECTS
+InsightDocs: AI-Powered Document Assistant Builder
+•	Built a no-code RAG platform allowing non-technical users to create custom document-based chatbots without programming.
+•	Developed a secure PostgreSQL-backed RAG platform integrating multiple LLM providers (OpenAI, OpenRouter, Ollama) with flexible model switching.
+•	Engineered a vector database using FAISS and pgvector for optimized semantic search with 30%+ improved retrieval precision.
+•	Implemented multi-tier authentication via Google OAuth and role-based access control, providing admin and user interfaces.
+•	Developed a dashboard with real-time analytics, enabling fine-tuning of RAG parameters across 5+ dimensions including similarity thresholds and chunk strategies.
+•	Optimized system performance through intelligent caching, token tracking, and query optimization, reducing API costs by 42% while maintaining response quality.
+
+Leveraging LLM, NLP, and Automation for Next Generation CTI Solutions with reduced manual workload.
+•	Fine-tuned LLaMA 3.1 with LoRA adapters on a 10,000+ report STIX2.1 dataset(custom), achieving 84% accuracy on CTI analysis.
+•	Integrated Regex (99% extraction reliability) and LLM inference, reducing non-deterministic outputs by 30%.
+•	Developed an automated ingestion framework, processing 2M+ data points/month, generating structured STIX2.1 JSON outputs
+•	Built a React.js + D3.js UI for real-time CTI visualisation (customizable knowledge graphs), improving analyst situational awareness and reducing data interpretation time.
+
+Multi-modal personal/freelance Reinforcement Learning projects 
+•	Developed Q-Learning systems for warehouse optimisation, reducing resource allocation time by 30%
+•	Created Deep Q-Learning and A3C models for autonomous navigation in dynamic environments
+•	Fine-tuned LLaMA 3 conversational AI using RAG techniques, improving domain-specific response quality by 65%
+
+SKILLS, TOOLS AND CERTIFICATES  
+•	Cybersecurity: Malware Analysis,  Penetration Testing, Vulnerability Assessment, Reverse Engineering, Threat Modelling, Risk Assessment, OWASP Top 10, MITRE ATT&CK Framework, Bash Scripting, TCP/IP. 
+•	Tools: Kali Linux, Wireshark, BurpSuite, Nmap, Metasploit, Nessus, Python, Ghidra, SQLi, LLaMA (Fine-Tuning)
+•	ML: NLP, Deep Learning (CNN, RNN), Reinforcement Learning, Model Optimization (XGBoost, Grid Search), Dimensionality Reduction. 
+•	DevSecOps: Python(Flask), Docker, Kubernetes, Grafana, ELK Stack, CI/CD (Git, CD Pipelines). 
+•	Full Stack Development: JavaScript, React, Node.js, Express, PostgreSQL, REST API. 
+•	Certifications: eJPT(INE), Security+ (self-studied), Linux/Windows Privilege Escalation(TCM), OSCP(preparing).   
+
+EXTRACURRICULAR ACTIVITIES  
+•	My Blogs:  https://medium.com/@kharbandaashish01- SQLi, File upload bypass and CTF Walkthrough. 
+•	Advisories published: https://www.dsci.in/files/content/advisory/2023  
+•	Competitions: ASME(SDC) - WR 1, ASME(IAM3D) - WR 2, Mars Hackathon - WR 7, Efficycle - AIR 7. 
+•	Director of Cinematography - Led a team of 16 members, managing production and post-production for an audience of 2000+. 

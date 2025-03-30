@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game | Ashish Kharbanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="../css/vectors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        /* Apple-specific styles */
+        .apple-hero {
+            min-height: 80vh;
+            padding: 180px 0 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .apple-hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin: 0 0 24px;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+        
+        .apple-tagline {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 24px;
+            max-width: 700px;
+        }
+        
+        .apple-description {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #555;
+            margin: 0 0 48px;
+            max-width: 650px;
+        }
+        
+        .apple-hero-image {
+            position: absolute;
+            top: 10%;
+            right: -10%;
+            width: 70%;
+            height: 90%;
+            transform: rotate(-15deg);
+            z-index: -1;
+        }
+        
+        .apple-links {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .apple-link {
+            font-size: 18px;
+            font-weight: 500;
+            color: #0066CC;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .apple-link i {
+            margin-left: 6px;
+            transition: transform 0.3s ease;
+        }
+        
+        .apple-link:hover {
+            color: #004499;
+        }
+        
+        .apple-link:hover i {
+            transform: translateX(4px);
+        }
+        
+        .apple-features {
+            padding: 120px 0;
+            background-color: #f5f5f7;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 96px;
+            margin-top: 64px;
+        }
+        
+        .feature-block {
+            padding: 32px 0;
+        }
+        
+        .feature-block h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #1a1a1a;
+        }
+        
+        .feature-block p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+        
+        .section-headline {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .section-subheadline {
+            font-size: 20px;
+            font-weight: 400;
+            color: #555;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
+            line-height: 1.5;
+        }
+        
+        .tech-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .tech-column h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 24px;
+            color: #1a1a1a;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .tech-item {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 12px 24px;
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .challenge-block {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .challenge-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .challenge-block h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #1a1a1a;
+        }
+        
+        .challenge-block p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0 0 16px;
+        }
+        
+        .challenge-block p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .apple-hero h1 {
+                font-size: 48px;
+            }
+            
+            .apple-tagline {
+                font-size: 24px;
+            }
+            
+            .apple-description {
+                font-size: 18px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .apple-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .apple-hero h1 {
+                font-size: 36px;
+            }
+            
+            .apple-tagline {
+                font-size: 20px;
+            }
+            
+            .apple-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .section-headline {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">AK</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                    </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Apple-style Hero Section -->
+        <section class="apple-hero">
+            <div class="container">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <h1>Simon Game</h1>
+                    <h2 class="apple-tagline">A modern take on the classic memory challenge.</h2>
+                    <p class="apple-description">Experience the iconic memory skill game reimagined for the web with enhanced features, responsive design, and immersive gameplay that tests and improves your cognitive abilities.</p>
+                    
+                    <div class="apple-links">
+                        <a href="https://ashishkhar.github.io/SIMON/" class="apple-link" target="_blank">
+                            Play the game <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://github.com/ashishkhar/SIMON" class="apple-link" target="_blank">
+                            View on GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="apple-hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="simon-vector interactive-vector" style="height: 500px; transform: scale(1.5);">
+                        <div class="simon-game">
+                        <div class="simon-container">
+                                <div class="simon-pad simon-pad-green"></div>
+                                <div class="simon-pad simon-pad-red"></div>
+                                <div class="simon-pad simon-pad-yellow"></div>
+                                <div class="simon-pad simon-pad-blue"></div>
+                                <div class="simon-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="apple-features">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up">Key Features</h2>
+                <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">A comprehensive reimagination of the classic game with modern capabilities and gameplay enhancements.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Classic Gameplay</h3>
+                        <p>Faithful recreation of the original Simon game mechanics with four colored buttons and sequence memorization, delivering a nostalgic experience with modern technological advantages.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Multiple Difficulty Modes</h3>
+                        <p>Three distinct difficulty levels affecting sequence speed, tolerance for errors, and maximum sequence length, allowing players to progressively challenge their memory skills.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Rich Audio & Visuals</h3>
+                        <p>Unique sounds for each color button with visual feedback using CSS animations and transitions, creating an immersive sensory experience that enhances gameplay.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="500">
+                        <h3>Mobile-First Design</h3>
+                        <p>Fully responsive layout with touch controls optimized for both desktop and mobile play, ensuring a consistent and enjoyable gaming experience across all device types.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="600">
+                        <h3>High Score Tracking</h3>
+                        <p>Local storage implementation to save and display player's best performances across sessions, adding a competitive element and encouraging repeated plays to beat personal records.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technology Section -->
+        <section class="container" style="padding: 120px 0;">
+            <h2 class="section-headline" data-aos="fade-up">Technology Stack</h2>
+            <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Built with modern web technologies for optimal performance and user experience.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-top: 64px;">
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Frontend</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">HTML5</span>
+                        <span class="tech-item">CSS3</span>
+                        <span class="tech-item">JavaScript (ES6+)</span>
+                    </div>
+                </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Libraries</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">Howler.js</span>
+                        <span class="tech-item">GSAP</span>
+                    </div>
+                </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Techniques</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">Async/Await</span>
+                        <span class="tech-item">CSS Grid</span>
+                        <span class="tech-item">Local Storage API</span>
+                    </div>
+                </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Deployment</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">GitHub Pages</span>
+                        <span class="tech-item">PWA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section style="background-color: #f5f5f7; padding: 120px 0;">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up">Architecture</h2>
+                <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">A modular design approach for maintainable and extensible gameplay logic.</p>
+                
+                <div style="max-width: 800px; margin: 0 auto; background-color: #fff; border-radius: 20px; padding: 48px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);" data-aos="fade-up" data-aos-delay="200">
+                    <p style="font-size: 20px; margin-bottom: 32px; color: #555; line-height: 1.6;">The game follows a modular architecture with these key components:</p>
+                    <ol style="list-style-type: none; counter-reset: item; padding: 0;">
+                        <li style="counter-increment: item; margin-bottom: 24px; display: flex; align-items: flex-start;">
+                            <div style="background-color: #0066CC; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 16px; flex-shrink: 0;">
+                                <span>1</span>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; margin: 0 0 8px; color: #1a1a1a;">Game Controller</h3>
+                                <p style="font-size: 16px; color: #555; margin: 0; line-height: 1.5;">Manages game state, rules, scoring, and sequence generation</p>
+                            </div>
+                        </li>
+                        <li style="counter-increment: item; margin-bottom: 24px; display: flex; align-items: flex-start;">
+                            <div style="background-color: #0066CC; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 16px; flex-shrink: 0;">
+                                <span>2</span>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; margin: 0 0 8px; color: #1a1a1a;">UI Manager</h3>
+                                <p style="font-size: 16px; color: #555; margin: 0; line-height: 1.5;">Handles rendering, animations, and user interaction</p>
+                            </div>
+                        </li>
+                        <li style="counter-increment: item; margin-bottom: 24px; display: flex; align-items: flex-start;">
+                            <div style="background-color: #0066CC; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 16px; flex-shrink: 0;">
+                                <span>3</span>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; margin: 0 0 8px; color: #1a1a1a;">Audio Controller</h3>
+                                <p style="font-size: 16px; color: #555; margin: 0; line-height: 1.5;">Controls sound playback and audio feedback</p>
+                            </div>
+                        </li>
+                        <li style="counter-increment: item; margin-bottom: 24px; display: flex; align-items: flex-start;">
+                            <div style="background-color: #0066CC; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 16px; flex-shrink: 0;">
+                                <span>4</span>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; margin: 0 0 8px; color: #1a1a1a;">Sequence Generator</h3>
+                                <p style="font-size: 16px; color: #555; margin: 0; line-height: 1.5;">Creates random patterns with increasing complexity</p>
+                            </div>
+                        </li>
+                        <li style="counter-increment: item; display: flex; align-items: flex-start;">
+                            <div style="background-color: #0066CC; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 16px; flex-shrink: 0;">
+                                <span>5</span>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; margin: 0 0 8px; color: #1a1a1a;">Score Manager</h3>
+                                <p style="font-size: 16px; color: #555; margin: 0; line-height: 1.5;">Tracks and persists high scores using local storage</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section class="container" style="padding: 120px 0;">
+            <h2 class="section-headline" data-aos="fade-up">Challenges & Solutions</h2>
+            <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Engineering innovations that overcame complex development hurdles.</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="challenge-block" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Timing Precision</h3>
+                    <p><strong>Challenge:</strong> Ensuring precise timing for sequence playback and user input validation</p>
+                    <p><strong>Solution:</strong> Implemented Promise-based asynchronous functions with carefully calibrated timing to create smooth, predictable gameplay</p>
+                        </div>
+                
+                <div class="challenge-block" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Mobile Experience</h3>
+                    <p><strong>Challenge:</strong> Creating a responsive design that maintains gameplay quality across diverse device sizes</p>
+                    <p><strong>Solution:</strong> Developed a flexible layout using CSS Grid with aspect ratio preservation and touch-optimized controls</p>
+                        </div>
+                
+                <div class="challenge-block" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Audio Synchronization</h3>
+                    <p><strong>Challenge:</strong> Coordinating audio feedback with visual elements across different browsers</p>
+                    <p><strong>Solution:</strong> Utilized Howler.js for consistent cross-browser audio handling and implemented preloading to eliminate timing issues</p>
+                        </div>
+                        </div>
+        </section>
+        
+        <!-- Results Section -->
+        <section style="background-color: #f5f5f7; padding: 120px 0;">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up">Results & Impact</h2>
+                <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Measurable improvements in gameplay experience and technical execution.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; margin-top: 64px;">
+                    <div style="background-color: #fff; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                        <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">100%</div>
+                        <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Cross-device compatibility</p>
+                    </div>
+
+                    <div style="background-color: #fff; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="300">
+                        <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">60ms</div>
+                        <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Response time to user input</p>
+                    </div>
+
+                    <div style="background-color: #fff; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="400">
+                        <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">3</div>
+                        <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Difficulty levels for all players</p>
+                    </div>
+
+                    <div style="background-color: #fff; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="500">
+                        <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">95%</div>
+                        <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Lighthouse performance score</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to action -->
+        <section style="padding: 120px 0; text-align: center;">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up" style="margin-bottom: 24px;">Ready to test your memory?</h2>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://ashishkhar.github.io/SIMON/" class="btn primary" style="font-size: 18px; padding: 16px 32px; border-radius: 30px;" target="_blank">
+                        Play the game now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Navigation -->
+        <div class="project-navigation" style="padding: 80px 0; background-color: #f5f5f7;">
+            <div class="container">
+                <a href="stix-visualizer.html" class="prev-project">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>STIX2.1 Visualizer</span>
+                </a>
+                <a href="../index.html#projects" class="all-projects">
+                    <i class="fas fa-th"></i>
+                </a>
+                <a href="insightdocs.html" class="next-project">
+                    <span>InsightDocs</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #f2f2f2; color: #1a1a1a; padding: 80px 0 40px;">
+        <div class="container">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <div style="font-size: 28px; font-weight: 700; margin-bottom: 16px;">AK</div>
+                
+                <div style="display: flex; gap: 24px; margin: 24px 0;">
+                    <a href="https://www.linkedin.com/in/ashishkhar" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://medium.com/@kharbandaashish01" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                    <a href="https://github.com/ashishkhar" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <div style="width: 40px; height: 1px; background-color: rgba(0, 0, 0, 0.2); margin: 24px 0;"></div>
+                
+                <p style="font-size: 14px; color: rgba(0, 0, 0, 0.6);">&copy; 2024 Ashish Kharbanda. All rights reserved.</p>
+                
+                <div style="margin-top: 40px;">
+                    <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(0, 0, 0, 0.05); color: #1a1a1a; transition: all 0.3s ease;">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Initialize AOS with custom settings
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html> 

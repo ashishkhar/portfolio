@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightDocs | Ashish Kharbanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="../css/vectors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        /* Apple-specific styles */
+        .apple-hero {
+            min-height: 80vh;
+            padding: 180px 0 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .apple-hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin: 0 0 24px;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+        
+        .apple-tagline {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 24px;
+            max-width: 700px;
+        }
+        
+        .apple-description {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #555;
+            margin: 0 0 48px;
+            max-width: 650px;
+        }
+        
+        .apple-hero-image {
+            position: absolute;
+            top: 10%;
+            right: -10%;
+            width: 70%;
+            height: 90%;
+            transform: rotate(-15deg);
+            z-index: -1;
+        }
+        
+        .apple-links {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .apple-link {
+            font-size: 18px;
+            font-weight: 500;
+            color: #0066CC;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .apple-link i {
+            margin-left: 6px;
+            transition: transform 0.3s ease;
+        }
+        
+        .apple-link:hover {
+            color: #004499;
+        }
+        
+        .apple-link:hover i {
+            transform: translateX(4px);
+        }
+        
+        .apple-features {
+            padding: 120px 0;
+            background-color: #f5f5f7;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 96px;
+            margin-top: 64px;
+        }
+        
+        .feature-block {
+            padding: 32px 0;
+        }
+        
+        .feature-block h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #1a1a1a;
+        }
+        
+        .feature-block p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+        
+        .section-headline {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .section-subheadline {
+            font-size: 20px;
+            font-weight: 400;
+            color: #555;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
+            line-height: 1.5;
+        }
+        
+        .tech-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .tech-column h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 24px;
+            color: #1a1a1a;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .tech-item {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 12px 24px;
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .challenge-block {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .challenge-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .challenge-block h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #1a1a1a;
+        }
+        
+        .challenge-block p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0 0 16px;
+        }
+        
+        .challenge-block p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .apple-hero h1 {
+                font-size: 48px;
+            }
+            
+            .apple-tagline {
+                font-size: 24px;
+            }
+            
+            .apple-description {
+                font-size: 18px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .apple-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .apple-hero h1 {
+                font-size: 36px;
+            }
+            
+            .apple-tagline {
+                font-size: 20px;
+            }
+            
+            .apple-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .section-headline {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">AK</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                    </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Apple-style Hero Section -->
+        <section class="apple-hero">
+            <div class="container">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <h1>InsightDocs</h1>
+                    <h2 class="apple-tagline">Your documents, transformed by AI.</h2>
+                    <p class="apple-description">A revolutionary document management and question answering system that leverages advanced RAG techniques to provide accurate answers based on your content.</p>
+                    
+                    <div class="apple-links">
+                        <a href="http://13.60.81.45/showcase/" class="apple-link" target="_blank">
+                            Try the demo <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="http://13.60.81.45/admin" class="apple-link" target="_blank">
+                            View live app <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="apple-hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="insightdocs-vector interactive-vector" style="height: 500px; transform: scale(1.5);">
+                        <style>
+                            /* Enhanced InsightDocs Vector Animation */
+                            .insightdocs-vector {
+                                background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                                overflow: hidden;
+                                position: relative;
+                            }
+                            
+                            .rag-process {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                position: relative;
+                            }
+                            
+                            .doc-upload-area {
+                                position: absolute;
+                                top: 10%;
+                                left: 10%;
+                                width: 30%;
+                                height: 80%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-around;
+                            }
+                            
+                            .document-pile {
+                                width: 90%;
+                                height: 70%;
+                                position: relative;
+                            }
+                            
+                            .doc {
+                                position: absolute;
+                                background-color: white;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                border-radius: 4px;
+                                width: 80%;
+                                height: 80%;
+                            }
+                            
+                            .doc-1 {
+                                top: 0;
+                                left: 0;
+                                z-index: 3;
+                                transform: rotate(-5deg);
+                            }
+                            
+                            .doc-2 {
+                                top: 10px;
+                                left: 10px;
+                                z-index: 2;
+                                transform: rotate(3deg);
+                            }
+                            
+                            .doc-3 {
+                                top: 20px;
+                                left: 5px;
+                                z-index: 1;
+                            }
+                            
+                            .doc-line {
+                                position: absolute;
+                                height: 2px;
+                                background-color: #e2e8f0;
+                                left: 10%;
+                                width: 80%;
+                            }
+                            
+                            .dl-1 { top: 15%; }
+                            .dl-2 { top: 25%; }
+                            .dl-3 { top: 35%; }
+                            .dl-4 { top: 45%; }
+                            .dl-5 { top: 55%; }
+                            .dl-6 { top: 65%; }
+                            
+                            .upload-arrow {
+                                width: 60%;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                animation: pulse-arrow 2s infinite;
+                            }
+                            
+                            .upload-arrow svg {
+                                color: #0066CC;
+                                width: 30px;
+                                height: 30px;
+                            }
+                            
+                            @keyframes pulse-arrow {
+                                0% { transform: translateY(0); opacity: 0.7; }
+                                50% { transform: translateY(-10px); opacity: 1; }
+                                100% { transform: translateY(0); opacity: 0.7; }
+                            }
+                            
+                            .processing-area {
+                                position: absolute;
+                                top: 20%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 20%;
+                                height: 60%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            
+                            .brain-icon {
+                                width: 70px;
+                                height: 70px;
+                                background-color: #0066CC;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+                                animation: pulse-brain 3s infinite;
+                                box-shadow: 0 0 20px rgba(0, 102, 204, 0.4);
+                            }
+                            
+                            .brain-icon svg {
+                                color: white;
+                                width: 40px;
+                                height: 40px;
+                            }
+                            
+                            .synapse {
+                                position: absolute;
+                                background-color: #0066CC;
+                                opacity: 0.6;
+                                border-radius: 50%;
+                            }
+                            
+                            .synapse-1 {
+                                width: 10px;
+                                height: 10px;
+                                top: -15px;
+                                left: 20px;
+                                animation: float 3s infinite;
+                            }
+                            
+                            .synapse-2 {
+                                width: 15px;
+                                height: 15px;
+                                bottom: -10px;
+                                right: 15px;
+                                animation: float 4s infinite;
+                            }
+                            
+                            .synapse-3 {
+                                width: 8px;
+                                height: 8px;
+                                top: 25px;
+                                right: -10px;
+                                animation: float 2.5s infinite;
+                            }
+                            
+                            @keyframes pulse-brain {
+                                0% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 102, 204, 0.4); }
+                                50% { transform: scale(1.1); box-shadow: 0 0 30px rgba(0, 102, 204, 0.6); }
+                                100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 102, 204, 0.4); }
+                            }
+                            
+                            @keyframes float {
+                                0% { transform: translateY(0) translateX(0); }
+                                25% { transform: translateY(-5px) translateX(5px); }
+                                50% { transform: translateY(-8px) translateX(-3px); }
+                                75% { transform: translateY(-3px) translateX(-5px); }
+                                100% { transform: translateY(0) translateX(0); }
+                            }
+                            
+                            .embedding-particles {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+                            
+                            .particle {
+                                position: absolute;
+                                width: 6px;
+                                height: 6px;
+                                background-color: #0066CC;
+                                border-radius: 50%;
+                                opacity: 0;
+                            }
+                            
+                            .p1 { animation: particle-move-1 4s infinite 0.2s; }
+                            .p2 { animation: particle-move-2 4s infinite 0.7s; }
+                            .p3 { animation: particle-move-3 4s infinite 1.1s; }
+                            .p4 { animation: particle-move-4 4s infinite 1.9s; }
+                            .p5 { animation: particle-move-5 4s infinite 2.3s; }
+                            
+                            @keyframes particle-move-1 {
+                                0% { left: 20%; top: 30%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 50%; top: 30%; opacity: 0; }
+                            }
+                            
+                            @keyframes particle-move-2 {
+                                0% { left: 25%; top: 40%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 50%; top: 45%; opacity: 0; }
+                            }
+                            
+                            @keyframes particle-move-3 {
+                                0% { left: 15%; top: 50%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 50%; top: 50%; opacity: 0; }
+                            }
+                            
+                            @keyframes particle-move-4 {
+                                0% { left: 20%; top: 60%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 50%; top: 55%; opacity: 0; }
+                            }
+                            
+                            @keyframes particle-move-5 {
+                                0% { left: 25%; top: 70%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 50%; top: 60%; opacity: 0; }
+                            }
+                            
+                            .chat-area {
+                                position: absolute;
+                                top: 15%;
+                                right: 10%;
+                                width: 30%;
+                                height: 70%;
+                                background-color: white;
+                                border-radius: 8px;
+                                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                                overflow: hidden;
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            
+                            .chat-header {
+                                height: 40px;
+                                background-color: #f1f5f9;
+                                border-bottom: 1px solid #e2e8f0;
+                                display: flex;
+                                align-items: center;
+                                padding: 0 15px;
+                            }
+                            
+                            .chat-title {
+                                width: 50%;
+                                height: 12px;
+                                background-color: #94a3b8;
+                                border-radius: 3px;
+                            }
+                            
+                            .chat-body {
+                                flex: 1;
+                                padding: 15px;
+                                display: flex;
+                                flex-direction: column;
+                                overflow: hidden;
+                            }
+                            
+                            .chat-message {
+                                max-width: 80%;
+                                padding: 12px;
+                                margin-bottom: 10px;
+                                border-radius: 12px;
+                                animation: message-appear 0.5s forwards;
+                                opacity: 0;
+                                transform: translateY(10px);
+                            }
+                            
+                            .user-message {
+                                align-self: flex-end;
+                                background-color: #0066CC;
+                                color: white;
+                                border-bottom-right-radius: 4px;
+                                animation-delay: 1s;
+                            }
+                            
+                            .ai-message {
+                                align-self: flex-start;
+                                background-color: #f1f5f9;
+                                color: #334155;
+                                border-bottom-left-radius: 4px;
+                                animation-delay: 2.5s;
+                            }
+                            
+                            @keyframes message-appear {
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+                            
+                            .chat-input {
+                                height: 50px;
+                                border-top: 1px solid #e2e8f0;
+                                display: flex;
+                                align-items: center;
+                                padding: 0 15px;
+                            }
+                            
+                            .input-field {
+                                flex: 1;
+                                height: 35px;
+                                background-color: #f1f5f9;
+                                border-radius: 18px;
+                                margin-right: 10px;
+                            }
+                            
+                            .send-button {
+                                width: 35px;
+                                height: 35px;
+                                background-color: #0066CC;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            
+                            .result-particles {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            
+                            .r-particle {
+                                position: absolute;
+                                width: 5px;
+                                height: 5px;
+                                background-color: #0066CC;
+                                border-radius: 50%;
+                                opacity: 0;
+                            }
+                            
+                            .r1 { animation: r-particle-move-1 4s infinite 3s; }
+                            .r2 { animation: r-particle-move-2 4s infinite 3.2s; }
+                            .r3 { animation: r-particle-move-3 4s infinite 3.5s; }
+                            
+                            @keyframes r-particle-move-1 {
+                                0% { left: 50%; top: 30%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 70%; top: 30%; opacity: 0; }
+                            }
+                            
+                            @keyframes r-particle-move-2 {
+                                0% { left: 50%; top: 45%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 70%; top: 45%; opacity: 0; }
+                            }
+                            
+                            @keyframes r-particle-move-3 {
+                                0% { left: 50%; top: 60%; opacity: 0; }
+                                20% { opacity: 0.8; }
+                                100% { left: 70%; top: 55%; opacity: 0; }
+                            }
+                        </style>
+                        
+                        <div class="rag-process">
+                            <!-- Document Upload Area -->
+                            <div class="doc-upload-area">
+                                <div class="document-pile">
+                                    <div class="doc doc-1">
+                                        <div class="doc-line dl-1"></div>
+                                        <div class="doc-line dl-2"></div>
+                                        <div class="doc-line dl-3"></div>
+                                        <div class="doc-line dl-4"></div>
+                                        <div class="doc-line dl-5"></div>
+                                        <div class="doc-line dl-6"></div>
+                                    </div>
+                                    <div class="doc doc-2">
+                                        <div class="doc-line dl-1"></div>
+                                        <div class="doc-line dl-2"></div>
+                                        <div class="doc-line dl-3"></div>
+                                        <div class="doc-line dl-4"></div>
+                                        <div class="doc-line dl-5"></div>
+                                    </div>
+                                    <div class="doc doc-3">
+                                        <div class="doc-line dl-1"></div>
+                                        <div class="doc-line dl-2"></div>
+                                        <div class="doc-line dl-3"></div>
+                                        <div class="doc-line dl-4"></div>
+                                    </div>
+                                </div>
+                                <div class="upload-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Embedding/Processing Area -->
+                            <div class="processing-area">
+                                <div class="brain-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                    <div class="synapse synapse-1"></div>
+                                    <div class="synapse synapse-2"></div>
+                                    <div class="synapse synapse-3"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Query Result/Chat Area -->
+                            <div class="chat-area">
+                                <div class="chat-header">
+                                    <div class="chat-title"></div>
+                                </div>
+                                <div class="chat-body">
+                                    <div class="chat-message user-message"></div>
+                                    <div class="chat-message ai-message"></div>
+                                </div>
+                                <div class="chat-input">
+                                    <div class="input-field"></div>
+                                    <div class="send-button"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Particle Animations -->
+                            <div class="embedding-particles">
+                                <div class="particle p1"></div>
+                                <div class="particle p2"></div>
+                                <div class="particle p3"></div>
+                                <div class="particle p4"></div>
+                                <div class="particle p5"></div>
+                            </div>
+                            
+                            <div class="result-particles">
+                                <div class="r-particle r1"></div>
+                                <div class="r-particle r2"></div>
+                                <div class="r-particle r3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="apple-features">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up">Revolutionary Features</h2>
+                <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">InsightDocs transforms how you interact with documents, making information access seamless and intuitive.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="200">
+                        <h3>No-Code RAG Platform</h3>
+                        <p>Create custom document-based chatbots without any programming knowledge. The intuitive interface lets anyone set up and deploy sophisticated document AI systems in minutes.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="300">
+                                <h3>Multiple LLM Integration</h3>
+                        <p>Seamlessly switch between various language model providers including OpenAI, OpenRouter, and Ollama with flexible model selection to optimize for cost and performance.</p>
+                            </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="400">
+                                <h3>Advanced Vector Search</h3>
+                        <p>Engineered vector database using FAISS and pgvector delivers 30%+ improved retrieval precision, ensuring the most relevant document sections are used for generating responses.</p>
+                            </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="500">
+                                <h3>Secure Authentication</h3>
+                        <p>Multi-tier authentication system via Google OAuth and role-based access control ensures your sensitive documents remain protected while maintaining seamless user experience.</p>
+                            </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="600">
+                                <h3>Analytics Dashboard</h3>
+                        <p>Real-time analytics provide insights across multiple dimensions, helping you fine-tune RAG parameters for optimal performance and understand user interaction patterns.</p>
+                            </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="700">
+                                <h3>Optimized Performance</h3>
+                        <p>Intelligent caching, token tracking, and query optimization reduce API costs by 42% while maintaining response quality, making the system both efficient and economical.</p>
+                    </div>
+                </div>
+                            </div>
+        </section>
+        
+        <!-- Technology Section -->
+        <section class="container" style="padding: 120px 0;">
+            <h2 class="section-headline" data-aos="fade-up">Technology Stack</h2>
+            <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Built with cutting-edge technologies for optimal performance, scalability, and user experience.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-top: 64px;">
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Frontend</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">React.js</span>
+                        <span class="tech-item">Tailwind CSS</span>
+                        <span class="tech-item">Chart.js</span>
+                    </div>
+                        </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="300">
+                            <h3>Backend</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">Python (Flask)</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">pgvector</span>
+                    </div>
+                        </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="400">
+                            <h3>AI/ML</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">OpenAI API</span>
+                        <span class="tech-item">FAISS</span>
+                        <span class="tech-item">Sentence Transformers</span>
+                        </div>
+                    </div>
+
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="500">
+                    <h3>DevOps</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">AWS EC2</span>
+                        <span class="tech-item">Nginx</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section style="background-color: #f5f5f7; padding: 120px 0;">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up">Challenges & Solutions</h2>
+                <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Engineering innovations that overcame complex technical hurdles.</p>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="challenge-block" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Document Chunking Optimization</h3>
+                            <p><strong>Challenge:</strong> Finding the optimal chunk size and overlap for different document types</p>
+                            <p><strong>Solution:</strong> Implemented dynamic chunking strategies that adapt based on document semantics rather than fixed token counts</p>
+                        </div>
+                    
+                    <div class="challenge-block" data-aos="fade-up" data-aos-delay="300">
+                            <h3>Query Precision</h3>
+                            <p><strong>Challenge:</strong> Improving relevance of retrieved context for complex queries</p>
+                            <p><strong>Solution:</strong> Developed hybrid retrieval combining BM25 with vector similarity and implemented Maximum Marginal Relevance to reduce redundancy</p>
+                    </div>
+
+                    <div class="challenge-block" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Cross-Platform Compatibility</h3>
+                        <p><strong>Challenge:</strong> Ensuring consistent performance across different browsers and devices</p>
+                        <p><strong>Solution:</strong> Implemented responsive design with progressive enhancement and extensive cross-browser testing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results Section -->
+        <section class="container" style="padding: 120px 0;">
+            <h2 class="section-headline" data-aos="fade-up">Results & Impact</h2>
+            <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Measurable improvements that transform document workflows.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; margin-top: 64px;">
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">65%</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Reduction in document processing time</p>
+                        </div>
+                
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="300">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">91%</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Query response accuracy</p>
+                    </div>
+                
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="400">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">15+</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Deployments across departments</p>
+                    </div>
+                
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="500">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">42%</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Decrease in operational costs</p>
+                                    </div>
+                                </div>
+        </section>
+        
+        <!-- Call to action -->
+        <section style="background-color: #f5f5f7; padding: 120px 0; text-align: center;">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up" style="margin-bottom: 24px;">Ready to transform your documents?</h2>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <a href="http://13.60.81.45/showcase/" class="btn primary" style="font-size: 18px; padding: 16px 32px; border-radius: 30px;" target="_blank">
+                        Try the demo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Navigation -->
+        <div class="project-navigation" style="padding: 80px 0; background-color: #fff;">
+            <div class="container">
+                <a href="simon-game.html" class="prev-project">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Simon Game</span>
+                </a>
+                <a href="../index.html#projects" class="all-projects">
+                    <i class="fas fa-th"></i>
+                </a>
+                <a href="cve-dashboard.html" class="next-project">
+                    <span>CVE Analysis</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #f2f2f2; color: #1a1a1a; padding: 80px 0 40px;">
+        <div class="container">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <div style="font-size: 28px; font-weight: 700; margin-bottom: 16px;">AK</div>
+                
+                <div style="display: flex; gap: 24px; margin: 24px 0;">
+                    <a href="https://www.linkedin.com/in/ashishkhar" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://medium.com/@kharbandaashish01" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                    <a href="https://github.com/ashishkhar" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <div style="width: 40px; height: 1px; background-color: rgba(0, 0, 0, 0.2); margin: 24px 0;"></div>
+                
+                <p style="font-size: 14px; color: rgba(0, 0, 0, 0.6);">&copy; 2024 Ashish Kharbanda. All rights reserved.</p>
+                
+                <div style="margin-top: 40px;">
+                    <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(0, 0, 0, 0.05); color: #1a1a1a; transition: all 0.3s ease;">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Initialize AOS with custom settings
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html> 

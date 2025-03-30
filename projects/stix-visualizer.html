@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIX2.1 Visualizer | Ashish Kharbanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="../css/vectors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        /* Apple-specific styles */
+        .apple-hero {
+            min-height: 80vh;
+            padding: 180px 0 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .apple-hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin: 0 0 24px;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+        
+        .apple-tagline {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 24px;
+            max-width: 700px;
+        }
+        
+        .apple-description {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #555;
+            margin: 0 0 48px;
+            max-width: 650px;
+        }
+        
+        .apple-hero-image {
+            position: absolute;
+            top: 10%;
+            right: -10%;
+            width: 70%;
+            height: 90%;
+            transform: rotate(-15deg);
+            z-index: -1;
+        }
+        
+        .apple-links {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .apple-link {
+            font-size: 18px;
+            font-weight: 500;
+            color: #0066CC;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .apple-link i {
+            margin-left: 6px;
+            transition: transform 0.3s ease;
+        }
+        
+        .apple-link:hover {
+            color: #004499;
+        }
+        
+        .apple-link:hover i {
+            transform: translateX(4px);
+        }
+        
+        .apple-features {
+            padding: 120px 0;
+            background-color: #f5f5f7;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 96px;
+            margin-top: 64px;
+        }
+        
+        .feature-block {
+            padding: 32px 0;
+        }
+        
+        .feature-block h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #1a1a1a;
+        }
+        
+        .feature-block p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+        
+        .section-headline {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .section-subheadline {
+            font-size: 20px;
+            font-weight: 400;
+            color: #555;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
+            line-height: 1.5;
+        }
+        
+        .tech-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .tech-column h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 24px;
+            color: #1a1a1a;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .tech-item {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 12px 24px;
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .challenge-block {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .challenge-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .challenge-block h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #1a1a1a;
+        }
+        
+        .challenge-block p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0 0 16px;
+        }
+        
+        .challenge-block p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .apple-hero h1 {
+                font-size: 48px;
+            }
+            
+            .apple-tagline {
+                font-size: 24px;
+            }
+            
+            .apple-description {
+                font-size: 18px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .apple-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .apple-hero h1 {
+                font-size: 36px;
+            }
+            
+            .apple-tagline {
+                font-size: 20px;
+            }
+            
+            .apple-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .section-headline {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="glass-nav">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../index.html">AK</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Apple-style Hero Section -->
+        <section class="apple-hero">
+            <div class="container">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <h1>STIX2.1 Visualizer</h1>
+                    <h2 class="apple-tagline">Threat intelligence from plain text.</h2>
+                    <p class="apple-description">An advanced tool that transforms complex STIX data into intuitive, interactive graph visualizations for enhanced threat intelligence analysis.</p>
+                    
+                    <div class="apple-links">
+                        <a href="https://6mzene6ct2nvevulxrb4fg.streamlit.app" class="apple-link" target="_blank">
+                            Try the demo <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://github.com/ashishkhar/stix2-viz" class="apple-link" target="_blank">
+                            View on GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="apple-hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="stix-vector interactive-vector" style="height: 500px; transform: scale(1.5);">
+                        <div class="graph-visualization">
+                            <div class="node-container">
+                                <div class="node node-threat-actor"></div>
+                                <div class="node node-malware"></div>
+                                <div class="node node-indicator"></div>
+                                <div class="node node-tool"></div>
+                                <div class="node node-campaign"></div>
+                                <div class="edge edge-uses"></div>
+                                <div class="edge edge-targets"></div>
+                                <div class="edge edge-indicates"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="apple-features">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up">Revolutionary Features</h2>
+                <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Transform complex threat data into actionable intelligence with advanced visualization and analytics.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="200">
+                        <h3>NLP-Powered Extraction</h3>
+                        <p>Extract STIX entities and relationships from unstructured threat reports using advanced natural language processing techniques with domain-specific entity recognition.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Interactive Graph Visualization</h3>
+                        <p>Experience dynamic, force-directed graph rendering with contextual node styling and relationship highlighting for intuitive exploration of complex threat landscapes.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Pattern Detection</h3>
+                        <p>Automatically identify common attack patterns and techniques across different threat reports using advanced graph algorithms and similarity detection.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="500">
+                        <h3>Multi-Format Support</h3>
+                        <p>Import and export capabilities for STIX 2.1 JSON, CSV, and seamless integration with TAXII servers to connect with the broader threat intelligence ecosystem.</p>
+                    </div>
+                    
+                    <div class="feature-block" data-aos="fade-up" data-aos-delay="600">
+                        <h3>Analytical Toolset</h3>
+                        <p>Leverage graph metrics, centrality analysis, and community detection algorithms for deeper threat investigation and identification of crucial nodes in attack patterns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technology Section -->
+        <section class="container" style="padding: 120px 0;">
+            <h2 class="section-headline" data-aos="fade-up">Technology Stack</h2>
+            <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Built with cutting-edge technologies for optimal performance, scalability, and visualization capabilities.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-top: 64px;">
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Frontend</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">Streamlit</span>
+                        <span class="tech-item">D3.js</span>
+                        <span class="tech-item">Cytoscape.js</span>
+                    </div>
+                </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Backend</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Flask API</span>
+                        <span class="tech-item">NetworkX</span>
+                    </div>
+                </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="400">
+                    <h3>NLP & ML</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">SpaCy</span>
+                        <span class="tech-item">HuggingFace</span>
+                        <span class="tech-item">BERT</span>
+                    </div>
+                </div>
+                
+                <div class="tech-column" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Data Processing</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">STIX2 Library</span>
+                        <span class="tech-item">Pandas</span>
+                        <span class="tech-item">NumPy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section style="background-color: #f5f5f7; padding: 120px 0;">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up">Challenges & Solutions</h2>
+                <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Engineering innovations that overcame complex technical hurdles in threat intelligence visualization.</p>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="challenge-block" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Entity Extraction Accuracy</h3>
+                        <p><strong>Challenge:</strong> Accurately identifying cybersecurity entities from unstructured text with domain-specific terminology</p>
+                        <p><strong>Solution:</strong> Fine-tuned BERT-based models on cybersecurity corpora with custom entity types and context-aware classification</p>
+                    </div>
+                    
+                    <div class="challenge-block" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Graph Scalability</h3>
+                        <p><strong>Challenge:</strong> Maintaining interactive performance with large threat intelligence graphs containing thousands of nodes</p>
+                        <p><strong>Solution:</strong> Implemented graph partitioning, level-of-detail rendering, and WebGL-based visualization to handle complex graphs</p>
+                    </div>
+                    
+                    <div class="challenge-block" data-aos="fade-up" data-aos-delay="400">
+                        <h3>STIX Complexity</h3>
+                        <p><strong>Challenge:</strong> Managing the complexity of STIX 2.1 data model with numerous object types and relationship semantics</p>
+                        <p><strong>Solution:</strong> Developed a simplified abstraction layer with intelligent defaults while preserving full STIX 2.1 compliance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results Section -->
+        <section class="container" style="padding: 120px 0;">
+            <h2 class="section-headline" data-aos="fade-up">Results & Impact</h2>
+            <p class="section-subheadline" data-aos="fade-up" data-aos-delay="100">Measurable improvements in threat intelligence analysis and visualization.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; margin-top: 64px;">
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">60%</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Faster threat analysis time</p>
+                </div>
+                
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="300">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">45%</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Improved pattern detection</p>
+                </div>
+                
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="400">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">10k+</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Threat reports processed</p>
+                </div>
+                
+                <div style="background-color: #f5f5f7; border-radius: 20px; padding: 40px; text-align: center;" data-aos="fade-up" data-aos-delay="500">
+                    <div style="font-size: 64px; font-weight: 700; color: #0066CC; margin-bottom: 16px;">80%</div>
+                    <p style="font-size: 20px; color: #1a1a1a; margin: 0;">Entity extraction accuracy</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to action -->
+        <section style="background-color: #f5f5f7; padding: 120px 0; text-align: center;">
+            <div class="container">
+                <h2 class="section-headline" data-aos="fade-up" style="margin-bottom: 24px;">Ready to transform your threat intelligence?</h2>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://6mzene6ct2nvevulxrb4fg.streamlit.app" class="btn primary" style="font-size: 18px; padding: 16px 32px; border-radius: 30px;" target="_blank">
+                        Try the demo
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Navigation -->
+        <div class="project-navigation" style="padding: 80px 0; background-color: #fff;">
+            <div class="container">
+                <a href="cve-dashboard.html" class="prev-project">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>CVE Analysis Dashboard</span>
+                </a>
+                <a href="../index.html#projects" class="all-projects">
+                    <i class="fas fa-th"></i>
+                </a>
+                <a href="simon-game.html" class="next-project">
+                    <span>Simon Game</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #f2f2f2; color: #1a1a1a; padding: 80px 0 40px;">
+        <div class="container">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <div style="font-size: 28px; font-weight: 700; margin-bottom: 16px;">AK</div>
+                
+                <div style="display: flex; gap: 24px; margin: 24px 0;">
+                    <a href="https://www.linkedin.com/in/ashishkhar" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://medium.com/@kharbandaashish01" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                    <a href="https://github.com/ashishkhar" target="_blank" style="color: #1a1a1a; font-size: 20px;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <div style="width: 40px; height: 1px; background-color: rgba(0, 0, 0, 0.2); margin: 24px 0;"></div>
+                
+                <p style="font-size: 14px; color: rgba(0, 0, 0, 0.6);">&copy; 2024 Ashish Kharbanda. All rights reserved.</p>
+                
+                <div style="margin-top: 40px;">
+                    <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(0, 0, 0, 0.05); color: #1a1a1a; transition: all 0.3s ease;">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Initialize AOS with custom settings
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html> 
