@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Animation libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"> -->
     <!-- Theme toggle -->
     <script>
         // Check for saved theme preference or use device preference
@@ -499,8 +499,8 @@
                     </div>
                     <div class="hero-visual" data-aos="fade-up">
                         <div class="blob-animation">
-                            <div class="profile-vector pulse-animation">
-                                <img src="img/erasebg-transformed.png" style="width: 180%; height: 180%; object-fit: cover; transition: transform 0.3s ease; cursor: pointer; margin-top: 50px; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <div class="profile-vector">
+                                <img src="img/IMG_3072.jpg" style="width: 230%; height: auto; object-fit: contain; transition: transform 0.3s ease; cursor: pointer; margin-top: 120px; margin-right: 30px; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                             </div>
                         </div>
                         <div class="floating-badges">
@@ -1210,21 +1210,21 @@
                                             <div class="doc-line dl-4"></div>
                                             <div class="doc-line dl-5"></div>
                                             <div class="doc-line dl-6"></div>
-                                        </div>
+                </div>
                                         <div class="doc doc-2">
                                             <div class="doc-line dl-1"></div>
                                             <div class="doc-line dl-2"></div>
                                             <div class="doc-line dl-3"></div>
                                             <div class="doc-line dl-4"></div>
                                             <div class="doc-line dl-5"></div>
-                                        </div>
+                </div>
                                         <div class="doc doc-3">
                                             <div class="doc-line dl-1"></div>
                                             <div class="doc-line dl-2"></div>
                                             <div class="doc-line dl-3"></div>
                                             <div class="doc-line dl-4"></div>
                                         </div>
-                                    </div>
+                                        </div>
                                     <div class="upload-arrow">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -1249,8 +1249,8 @@
                                         <div class="synapse synapse-3"></div>
                                         <div class="synapse synapse-4"></div>
                                         <div class="synapse synapse-5"></div>
-                                    </div>
                                 </div>
+                        </div>
                                 
                                 <!-- Query Result/Chat Area -->
                                 <div class="chat-area">
@@ -1261,7 +1261,7 @@
                                             <div class="chat-action action-2"></div>
                                             <div class="chat-action action-3"></div>
                                         </div>
-                                    </div>
+                            </div>
                                     <div class="chat-body">
                                         <div class="chat-message user-message"></div>
                                         <div class="chat-message ai-message"></div>
@@ -1270,14 +1270,14 @@
                                             <div class="typing-dot typing-dot-2"></div>
                                             <div class="typing-dot typing-dot-3"></div>
                                         </div>
-                                    </div>
+                            </div>
                                     <div class="chat-input">
                                         <div class="input-field"></div>
                                         <div class="send-button">
                                             <div class="send-icon"></div>
                                         </div>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
                                 
                                 <!-- Particle Animations -->
                                 <div class="embedding-particles">
@@ -1288,7 +1288,7 @@
                                     <div class="particle p5"></div>
                                     <div class="particle p6"></div>
                                     <div class="particle p7"></div>
-                                </div>
+                    </div>
 
                                 <div class="result-particles">
                                     <div class="r-particle r1"></div>
@@ -1329,6 +1329,7 @@
                                     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
                                     overflow: hidden;
                                     position: relative;
+                                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
                                 }
                                 
                                 .cve-analysis-process {
@@ -1336,6 +1337,7 @@
                                     height: 100%;
                                     display: flex;
                                     position: relative;
+                                    perspective: 1000px;
                                 }
                                 
                                 /* Data Ingestion Area */
@@ -1348,74 +1350,131 @@
                                     display: flex;
                                     flex-direction: column;
                                     gap: 15px;
+                                    transform-style: preserve-3d;
                                 }
                                 
                                 .cve-feed {
                                     width: 100%;
                                     height: 40%;
-                                    background-color: white;
-                                    border-radius: 8px;
-                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+                                    border-radius: 12px;
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
                                     overflow: hidden;
                                     display: flex;
                                     flex-direction: column;
+                                    transform: translateZ(20px);
+                                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                }
+                                
+                                .cve-feed:hover {
+                                    transform: translateZ(30px) scale(1.02);
+                                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
                                 }
                                 
                                 .feed-header {
-                                    height: 36px;
-                                    background-color: #f1f5f9;
-                                    border-bottom: 1px solid #e2e8f0;
+                                    height: 40px;
+                                    background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 100%);
+                                    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
                                     display: flex;
                                     align-items: center;
                                     padding: 0 15px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .feed-header::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                                    animation: shimmer 2s infinite;
+                                }
+                                
+                                @keyframes shimmer {
+                                    0% { transform: translateX(-100%); }
+                                    100% { transform: translateX(100%); }
                                 }
                                 
                                 .feed-title {
                                     display: flex;
                                     align-items: center;
-                                    gap: 10px;
+                                    gap: 12px;
+                                    position: relative;
+                                    z-index: 1;
                                 }
                                 
                                 .feed-icon {
-                                    width: 18px;
-                                    height: 18px;
-                                    background-color: #e11d48;
+                                    width: 24px;
+                                    height: 24px;
+                                    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
                                     border-radius: 50%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     color: white;
-                                    font-size: 10px;
+                                    font-size: 12px;
+                                    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+                                    animation: pulse 2s infinite;
+                                }
+                                
+                                @keyframes pulse {
+                                    0% { transform: scale(1); box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3); }
+                                    50% { transform: scale(1.1); box-shadow: 0 6px 16px rgba(225, 29, 72, 0.4); }
+                                    100% { transform: scale(1); box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3); }
                                 }
                                 
                                 .feed-name {
-                                    width: 100px;
-                                    height: 12px;
-                                    background-color: #94a3b8;
-                                    border-radius: 3px;
+                                    width: 120px;
+                                    height: 14px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 4px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .feed-name::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .feed-content {
                                     flex: 1;
-                                    padding: 12px;
+                                    padding: 15px;
                                     display: flex;
                                     flex-direction: column;
-                                    gap: 8px;
+                                    gap: 10px;
                                     overflow: hidden;
+                                    position: relative;
                                 }
                                 
                                 .cve-entry {
-                                    height: 30px;
-                                    border-radius: 4px;
-                                    background-color: #f8fafc;
+                                    height: 36px;
+                                    border-radius: 6px;
+                                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
                                     display: flex;
                                     align-items: center;
-                                    padding: 0 10px;
-                                    border-left: 3px solid;
-                                    gap: 8px;
-                                    animation: entry-appear 0.5s forwards;
+                                    padding: 0 12px;
+                                    border-left: 4px solid;
+                                    gap: 10px;
+                                    animation: entry-appear 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
                                     opacity: 0;
                                     transform: translateY(10px);
+                                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                }
+                                
+                                .cve-entry:hover {
+                                    transform: translateY(-2px);
+                                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
                                 }
                                 
                                 .entry-1 { border-left-color: #e11d48; animation-delay: 0.2s; }
@@ -1431,17 +1490,43 @@
                                 }
                                 
                                 .entry-id {
-                                    width: 70px;
-                                    height: 10px;
-                                    background-color: #94a3b8;
-                                    border-radius: 2px;
+                                    width: 80px;
+                                    height: 12px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .entry-id::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .entry-bar {
                                     flex: 1;
-                                    height: 10px;
-                                    background-color: #e2e8f0;
-                                    border-radius: 2px;
+                                    height: 12px;
+                                    background: linear-gradient(90deg, #e2e8f0 0%, #f1f5f9 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .entry-bar::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 /* External Sources */
@@ -1450,51 +1535,91 @@
                                     height: 50%;
                                     display: flex;
                                     flex-direction: column;
-                                    gap: 10px;
+                                    gap: 12px;
                                 }
                                 
                                 .source-container {
                                     flex: 1;
-                                    background-color: white;
-                                    border-radius: 8px;
-                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+                                    border-radius: 12px;
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     gap: 15px;
-                                    padding: 10px;
+                                    padding: 15px;
+                                    transform: translateZ(20px);
+                                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                }
+                                
+                                .source-container:hover {
+                                    transform: translateZ(30px) scale(1.02);
+                                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
                                 }
                                 
                                 .source-icon {
-                                    width: 32px;
-                                    height: 32px;
-                                    background-color: #f1f5f9;
-                                    border-radius: 6px;
+                                    width: 40px;
+                                    height: 40px;
+                                    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+                                    border-radius: 8px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
-                                    font-size: 16px;
+                                    font-size: 20px;
+                                    color: #0066CC;
+                                    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+                                    transition: transform 0.3s ease;
+                                }
+                                
+                                .source-container:hover .source-icon {
+                                    transform: scale(1.1);
                                 }
                                 
                                 .source-details {
                                     flex: 1;
                                     display: flex;
                                     flex-direction: column;
-                                    gap: 6px;
+                                    gap: 8px;
                                 }
                                 
                                 .source-title {
-                                    width: 70%;
-                                    height: 8px;
-                                    background-color: #94a3b8;
-                                    border-radius: 2px;
+                                    width: 80%;
+                                    height: 10px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .source-title::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .source-subtitle {
-                                    width: 50%;
-                                    height: 6px;
-                                    background-color: #e2e8f0;
-                                    border-radius: 2px;
+                                    width: 60%;
+                                    height: 8px;
+                                    background: linear-gradient(90deg, #e2e8f0 0%, #f1f5f9 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .source-subtitle::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 /* AI Processing Engine */
@@ -1509,40 +1634,71 @@
                                     flex-direction: column;
                                     align-items: center;
                                     justify-content: center;
+                                    transform-style: preserve-3d;
                                 }
                                 
                                 .engine-core {
-                                    width: 60px;
-                                    height: 60px;
+                                    width: 80px;
+                                    height: 80px;
                                     background: linear-gradient(135deg, #0066CC 0%, #0044AA 100%);
-                                    border-radius: 12px;
+                                    border-radius: 16px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     position: relative;
-                                    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+                                    box-shadow: 0 12px 30px rgba(0, 102, 204, 0.4);
                                     animation: engine-pulse 3s infinite;
                                     z-index: 2;
+                                    transform: translateZ(40px);
                                 }
                                 
                                 .engine-icon {
                                     color: white;
-                                    font-size: 30px;
+                                    font-size: 40px;
+                                    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
                                 }
                                 
                                 @keyframes engine-pulse {
-                                    0% { transform: scale(1); box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3); }
-                                    50% { transform: scale(1.1); box-shadow: 0 8px 25px rgba(0, 102, 204, 0.5); }
-                                    100% { transform: scale(1); box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3); }
+                                    0% { 
+                                        transform: translateZ(40px) scale(1);
+                                        box-shadow: 0 12px 30px rgba(0, 102, 204, 0.4);
+                                    }
+                                    50% { 
+                                        transform: translateZ(50px) scale(1.1);
+                                        box-shadow: 0 16px 40px rgba(0, 102, 204, 0.6);
+                                    }
+                                    100% { 
+                                        transform: translateZ(40px) scale(1);
+                                        box-shadow: 0 12px 30px rgba(0, 102, 204, 0.4);
+                                    }
                                 }
                                 
                                 .processing-ring {
                                     position: absolute;
-                                    width: 100px;
-                                    height: 100px;
+                                    width: 120px;
+                                    height: 120px;
                                     border: 3px dotted rgba(0, 102, 204, 0.4);
                                     border-radius: 50%;
                                     animation: spin 10s linear infinite;
+                                    transform-style: preserve-3d;
+                                }
+                                
+                                .processing-ring::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: -3px;
+                                    left: -3px;
+                                    width: 12px;
+                                    height: 12px;
+                                    background: #0066CC;
+                                    border-radius: 50%;
+                                    box-shadow: 0 0 10px #0066CC;
+                                    animation: ring-dot 10s linear infinite;
+                                }
+                                
+                                @keyframes ring-dot {
+                                    0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+                                    100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
                                 }
                                 
                                 @keyframes spin {
@@ -1560,22 +1716,26 @@
                                 
                                 .data-particle {
                                     position: absolute;
-                                    width: 4px;
-                                    height: 4px;
+                                    width: 6px;
+                                    height: 6px;
                                     border-radius: 50%;
                                     opacity: 0;
+                                    filter: blur(1px);
                                 }
                                 
                                 .particle-feed {
-                                    background-color: #e11d48;
+                                    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+                                    box-shadow: 0 0 10px rgba(225, 29, 72, 0.5);
                                 }
                                 
                                 .particle-source-1 {
-                                    background-color: #0066CC;
+                                    background: linear-gradient(135deg, #0066CC 0%, #0044AA 100%);
+                                    box-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
                                 }
                                 
                                 .particle-source-2 {
-                                    background-color: #22c55e;
+                                    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+                                    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
                                 }
                                 
                                 .p-feed-1 { animation: feed-to-engine-1 3s infinite 0.5s; }
@@ -1586,48 +1746,110 @@
                                 .p-source-2 { animation: source-to-engine-2 3s infinite 2s; }
                                 
                                 @keyframes feed-to-engine-1 {
-                                    0% { left: 20%; top: 20%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 50%; top: 40%; opacity: 0; }
+                                    0% { 
+                                        left: 20%; top: 20%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 50%; top: 40%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes feed-to-engine-2 {
-                                    0% { left: 20%; top: 30%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 50%; top: 45%; opacity: 0; }
+                                    0% { 
+                                        left: 20%; top: 30%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 50%; top: 45%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes feed-to-engine-3 {
-                                    0% { left: 20%; top: 40%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 50%; top: 50%; opacity: 0; }
+                                    0% { 
+                                        left: 20%; top: 40%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 50%; top: 50%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes source-to-engine-1 {
-                                    0% { left: 20%; top: 60%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 50%; top: 45%; opacity: 0; }
+                                    0% { 
+                                        left: 20%; top: 60%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 50%; top: 45%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes source-to-engine-2 {
-                                    0% { left: 20%; top: 70%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 50%; top: 50%; opacity: 0; }
+                                    0% { 
+                                        left: 20%; top: 70%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 50%; top: 50%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 /* Result Particles */
                                 .result-particle {
                                     position: absolute;
-                                    width: 4px;
-                                    height: 4px;
-                                    background-color: #0066CC;
+                                    width: 6px;
+                                    height: 6px;
+                                    background: linear-gradient(135deg, #0066CC 0%, #0044AA 100%);
                                     border-radius: 50%;
                                     opacity: 0;
+                                    filter: blur(1px);
+                                    box-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
                                 }
                                 
                                 .r-particle-1 { animation: engine-to-results-1 3s infinite 3s; }
@@ -1639,52 +1861,136 @@
                                 .r-particle-7 { animation: engine-to-remediation-2 3s infinite 4.8s; }
                                 
                                 @keyframes engine-to-results-1 {
-                                    0% { left: 50%; top: 40%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 75%; top: 25%; opacity: 0; }
+                                    0% { 
+                                        left: 50%; top: 40%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 75%; top: 25%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes engine-to-results-2 {
-                                    0% { left: 50%; top: 45%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 75%; top: 50%; opacity: 0; }
+                                    0% { 
+                                        left: 50%; top: 45%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 75%; top: 50%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes engine-to-results-3 {
-                                    0% { left: 50%; top: 50%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 75%; top: 75%; opacity: 0; }
+                                    0% { 
+                                        left: 50%; top: 50%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 75%; top: 75%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes engine-to-impact-1 {
-                                    0% { left: 50%; top: 45%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 75%; top: 45%; opacity: 0; }
+                                    0% { 
+                                        left: 50%; top: 45%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 75%; top: 45%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes engine-to-impact-2 {
-                                    0% { left: 50%; top: 45%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 75%; top: 50%; opacity: 0; }
+                                    0% { 
+                                        left: 50%; top: 45%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 75%; top: 50%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes engine-to-remediation-1 {
-                                    0% { left: 50%; top: 50%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 75%; top: 65%; opacity: 0; }
+                                    0% { 
+                                        left: 50%; top: 50%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 75%; top: 65%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 @keyframes engine-to-remediation-2 {
-                                    0% { left: 50%; top: 50%; opacity: 0; }
-                                    20% { opacity: 0.8; }
-                                    80% { opacity: 0.8; }
-                                    100% { left: 75%; top: 70%; opacity: 0; }
+                                    0% { 
+                                        left: 50%; top: 50%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
+                                    20% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    80% { 
+                                        opacity: 0.8;
+                                        transform: scale(1);
+                                    }
+                                    100% { 
+                                        left: 75%; top: 70%; opacity: 0;
+                                        transform: scale(0.5);
+                                    }
                                 }
                                 
                                 /* Analysis Results Area */
@@ -1697,34 +2003,68 @@
                                     display: flex;
                                     flex-direction: column;
                                     gap: 15px;
+                                    transform-style: preserve-3d;
                                 }
                                 
                                 /* Severity Score Card */
                                 .score-card {
                                     width: 100%;
                                     height: 30%;
-                                    background-color: white;
-                                    border-radius: 8px;
-                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+                                    border-radius: 12px;
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
                                     display: flex;
                                     flex-direction: column;
                                     overflow: hidden;
+                                    transform: translateZ(20px);
+                                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                }
+                                
+                                .score-card:hover {
+                                    transform: translateZ(30px) scale(1.02);
+                                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
                                 }
                                 
                                 .score-header {
-                                    height: 36px;
-                                    background-color: #f1f5f9;
-                                    border-bottom: 1px solid #e2e8f0;
+                                    height: 40px;
+                                    background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 100%);
+                                    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
                                     display: flex;
                                     align-items: center;
                                     padding: 0 15px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .score-header::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                                    animation: shimmer 2s infinite;
                                 }
                                 
                                 .score-label {
-                                    width: 80px;
-                                    height: 12px;
-                                    background-color: #94a3b8;
-                                    border-radius: 3px;
+                                    width: 100px;
+                                    height: 14px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 4px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .score-label::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .score-content {
@@ -1732,12 +2072,13 @@
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
-                                    padding: 15px;
+                                    padding: 20px;
+                                    position: relative;
                                 }
                                 
                                 .score-gauge {
-                                    width: 80px;
-                                    height: 80px;
+                                    width: 100px;
+                                    height: 100px;
                                     border-radius: 50%;
                                     background: conic-gradient(
                                         #e11d48 0% 20%,
@@ -1750,22 +2091,32 @@
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                                    animation: gauge-pulse 3s infinite;
+                                }
+                                
+                                @keyframes gauge-pulse {
+                                    0% { transform: scale(1); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+                                    50% { transform: scale(1.05); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); }
+                                    100% { transform: scale(1); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
                                 }
                                 
                                 .gauge-center {
-                                    width: 60px;
-                                    height: 60px;
-                                    background-color: white;
+                                    width: 80px;
+                                    height: 80px;
+                                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
                                     border-radius: 50%;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
+                                    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
                                 }
                                 
                                 .gauge-value {
-                                    font-size: 20px;
+                                    font-size: 24px;
                                     color: #1a1a1a;
                                     font-weight: 600;
+                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
                                 }
                                 
                                 .score-details {
@@ -1773,85 +2124,155 @@
                                     padding-left: 20px;
                                     display: flex;
                                     flex-direction: column;
-                                    gap: 8px;
+                                    gap: 10px;
                                 }
                                 
                                 .score-detail {
                                     display: flex;
                                     align-items: center;
-                                    gap: 8px;
+                                    gap: 10px;
                                 }
                                 
                                 .detail-name {
-                                    width: 60px;
-                                    height: 8px;
-                                    background-color: #94a3b8;
-                                    border-radius: 2px;
+                                    width: 70px;
+                                    height: 10px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .detail-name::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .detail-value {
-                                    width: 20px;
-                                    height: 8px;
-                                    background-color: #e2e8f0;
-                                    border-radius: 2px;
+                                    width: 30px;
+                                    height: 10px;
+                                    background: linear-gradient(90deg, #e2e8f0 0%, #f1f5f9 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .detail-value::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 /* Impact Analysis Card */
                                 .impact-card {
                                     width: 100%;
                                     height: 35%;
-                                    background-color: white;
-                                    border-radius: 8px;
-                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+                                    border-radius: 12px;
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
                                     display: flex;
                                     flex-direction: column;
                                     overflow: hidden;
+                                    transform: translateZ(20px);
+                                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                }
+                                
+                                .impact-card:hover {
+                                    transform: translateZ(30px) scale(1.02);
+                                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
                                 }
                                 
                                 .impact-header {
-                                    height: 36px;
-                                    background-color: #f1f5f9;
-                                    border-bottom: 1px solid #e2e8f0;
+                                    height: 40px;
+                                    background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 100%);
+                                    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
                                     display: flex;
                                     align-items: center;
                                     padding: 0 15px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .impact-header::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                                    animation: shimmer 2s infinite;
                                 }
                                 
                                 .impact-title {
-                                    width: 100px;
-                                    height: 12px;
-                                    background-color: #94a3b8;
-                                    border-radius: 3px;
+                                    width: 120px;
+                                    height: 14px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 4px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .impact-title::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .impact-content {
                                     flex: 1;
-                                    padding: 15px;
+                                    padding: 20px;
                                     display: flex;
                                     flex-direction: column;
-                                    gap: 12px;
+                                    gap: 15px;
                                 }
                                 
                                 .impact-meter {
-                                    height: 8px;
-                                    border-radius: 4px;
-                                    background-color: #f1f5f9;
+                                    height: 10px;
+                                    border-radius: 5px;
+                                    background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 100%);
                                     position: relative;
+                                    overflow: hidden;
                                 }
                                 
                                 .impact-fill {
                                     position: absolute;
                                     height: 100%;
-                                    border-radius: 4px;
+                                    border-radius: 5px;
                                     left: 0;
-                                    animation: fill-bar 1.5s forwards;
+                                    animation: fill-bar 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
                                     transform-origin: left;
                                     transform: scaleX(0);
+                                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                                 }
                                 
-                                .confidentiality { background-color: #0284c7; animation-delay: 4s; }
-                                .integrity { background-color: #7c3aed; animation-delay: 4.3s; }
-                                .availability { background-color: #db2777; animation-delay: 4.6s; }
+                                .confidentiality { 
+                                    background: linear-gradient(90deg, #0284c7 0%, #0369a1 100%);
+                                    animation-delay: 4s;
+                                }
+                                .integrity { 
+                                    background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+                                    animation-delay: 4.3s;
+                                }
+                                .availability { 
+                                    background: linear-gradient(90deg, #db2777 0%, #be185d 100%);
+                                    animation-delay: 4.6s;
+                                }
                                 
                                 @keyframes fill-bar {
                                     to { transform: scaleX(1); }
@@ -1864,63 +2285,123 @@
                                 .impact-label {
                                     display: flex;
                                     justify-content: space-between;
+                                    align-items: center;
                                 }
                                 
                                 .impact-name {
-                                    width: 40%;
-                                    height: 8px;
-                                    background-color: #94a3b8;
-                                    border-radius: 2px;
+                                    width: 45%;
+                                    height: 10px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .impact-name::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .impact-value {
-                                    width: 15%;
-                                    height: 8px;
-                                    background-color: #e2e8f0;
-                                    border-radius: 2px;
+                                    width: 20%;
+                                    height: 10px;
+                                    background: linear-gradient(90deg, #e2e8f0 0%, #f1f5f9 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .impact-value::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 /* Remediation Card */
                                 .remediation-card {
                                     width: 100%;
                                     height: 35%;
-                                    background-color: white;
-                                    border-radius: 8px;
-                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+                                    border-radius: 12px;
+                                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
                                     display: flex;
                                     flex-direction: column;
                                     overflow: hidden;
+                                    transform: translateZ(20px);
+                                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                }
+                                
+                                .remediation-card:hover {
+                                    transform: translateZ(30px) scale(1.02);
+                                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
                                 }
                                 
                                 .remediation-header {
-                                    height: 36px;
-                                    background-color: #f1f5f9;
-                                    border-bottom: 1px solid #e2e8f0;
+                                    height: 40px;
+                                    background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 100%);
+                                    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
                                     display: flex;
                                     align-items: center;
                                     padding: 0 15px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .remediation-header::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                                    animation: shimmer 2s infinite;
                                 }
                                 
                                 .remediation-title {
-                                    width: 120px;
-                                    height: 12px;
-                                    background-color: #94a3b8;
-                                    border-radius: 3px;
+                                    width: 140px;
+                                    height: 14px;
+                                    background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%);
+                                    border-radius: 4px;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+                                
+                                .remediation-title::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
                                 }
                                 
                                 .remediation-content {
                                     flex: 1;
-                                    padding: 15px;
+                                    padding: 20px;
                                     display: flex;
                                     flex-direction: column;
-                                    gap: 10px;
+                                    gap: 12px;
                                 }
                                 
                                 .remediation-item {
                                     display: flex;
-                                    gap: 10px;
+                                    gap: 12px;
                                     align-items: flex-start;
-                                    animation: item-appear 0.5s forwards;
+                                    animation: item-appear 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
                                     opacity: 0;
                                     transform: translateY(10px);
                                 }
@@ -1930,42 +2411,64 @@
                                 .ri-3 { animation-delay: 5.6s; }
                                 
                                 .item-icon {
-                                    width: 20px;
-                                    height: 20px;
+                                    width: 24px;
+                                    height: 24px;
                                     border-radius: 50%;
-                                    background-color: #0066CC;
+                                    background: linear-gradient(135deg, #0066CC 0%, #0044AA 100%);
                                     flex-shrink: 0;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     color: white;
-                                    font-size: 10px;
+                                    font-size: 12px;
+                                    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
                                 }
                                 
                                 .item-text {
                                     flex: 1;
-                                    height: 8px;
-                                    background-color: #e2e8f0;
-                                    border-radius: 2px;
+                                    height: 100px;
+                                    background: linear-gradient(90deg, #e2e8f0 0%, #f1f5f9 100%);
+                                    border-radius: 3px;
+                                    position: relative;
+                                    overflow: hidden;
                                 }
                                 
-                                /* Connection Lines for CVE Analysis */
+                                .item-text::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                    animation: shimmer 1.5s infinite;
+                                }
+                                
+                                /* Connection Lines */
                                 .connection-line {
                                     position: absolute;
-                                    background-color: rgba(0, 102, 204, 0.2);
-                                    border: 1px dashed #0066CC;
+                                    background: linear-gradient(90deg, rgba(0, 102, 204, 0.2) 0%, rgba(0, 102, 204, 0.4) 50%, rgba(0, 102, 204, 0.2) 100%);
+                                    border: 1px dashed rgba(0, 102, 204, 0.4);
                                     z-index: 1;
+                                    filter: blur(1px);
                                 }
                                 
                                 /* Arrow Connectors */
                                 .flow-arrow {
                                     position: absolute;
-                                    width: 24px;
-                                    height: 24px;
+                                    width: 32px;
+                                    height: 32px;
                                     z-index: 2;
                                     color: #0066CC;
                                     opacity: 0.7;
-                                    filter: drop-shadow(0 0 1px rgba(0, 102, 204, 0.3));
+                                    filter: drop-shadow(0 0 2px rgba(0, 102, 204, 0.4));
+                                    animation: arrow-pulse 2s infinite;
+                                }
+                                
+                                @keyframes arrow-pulse {
+                                    0% { transform: scale(1); opacity: 0.7; }
+                                    50% { transform: scale(1.1); opacity: 0.9; }
+                                    100% { transform: scale(1); opacity: 0.7; }
                                 }
                                 
                                 .flow-arrow.arrow-1 {
@@ -2167,23 +2670,106 @@
                                         <div class="remediation-content">
                                             <div class="remediation-item ri-1">
                                                 <div class="item-icon">
-                                                    <i class="fas fa-check"></i>
+                                                    <i class="fas fa-shield-alt"></i>
             </div>
-                                                <div class="item-text"></div>
+                                                <div class="item-text">
+                                                    <div class="item-title">Update System Components</div>
+                                                    <div class="item-description">Apply latest security patches and updates to affected systems</div>
+                                                </div>
                                 </div>
                                             <div class="remediation-item ri-2">
                                                 <div class="item-icon">
-                                                    <i class="fas fa-check"></i>
+                                                    <i class="fas fa-lock"></i>
                         </div>
-                                                <div class="item-text"></div>
+                                                <div class="item-text">
+                                                    <div class="item-title">Access Control Review</div>
+                                                    <div class="item-description">Implement strict access controls and authentication measures</div>
+                                                </div>
                             </div>
                                             <div class="remediation-item ri-3">
                                                 <div class="item-icon">
-                                                    <i class="fas fa-check"></i>
+                                                    <i class="fas fa-code-branch"></i>
                             </div>
-                                                <div class="item-text"></div>
+                                                <div class="item-text">
+                                                    <div class="item-title">Code Review</div>
+                                                    <div class="item-description">Conduct thorough code review and implement security best practices</div>
                             </div>
                         </div>
+                                            <style>
+                                                .remediation-item {
+                                                    display: flex;
+                                                    gap: 12px;
+                                                    align-items: flex-start;
+                                                    animation: item-appear 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                                                    opacity: 0;
+                                                    transform: translateY(10px);
+                                                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+                                                    border-radius: 8px;
+                                                    padding: 12px;
+                                                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                                                    transition: all 0.3s ease;
+                                                }
+
+                                                .remediation-item:hover {
+                                                    transform: translateY(-2px);
+                                                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                                                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%);
+                                                }
+
+                                                .item-icon {
+                                                    width: 32px;
+                                                    height: 32px;
+                                                    border-radius: 8px;
+                                                    background: linear-gradient(135deg, #0066CC 0%, #0044AA 100%);
+                                                    flex-shrink: 0;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    color: white;
+                                                    font-size: 14px;
+                                                    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+                                                    transition: all 0.3s ease;
+                                                }
+
+                                                .remediation-item:hover .item-icon {
+                                                    transform: scale(1.1);
+                                                    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+                                                }
+
+                                                .item-text {
+                                                    flex: 1;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    gap: 4px;
+                                                }
+
+                                                .item-title {
+                                                    font-size: 12px;
+                                                    font-weight: 600;
+                                                    color: #1a1a1a;
+                                                }
+
+                                                .item-description {
+                                                    font-size: 10px;
+                                                    color: #64748b;
+                                                    line-height: 1.4;
+                                                }
+
+                                                .ri-1 { animation-delay: 5s; }
+                                                .ri-2 { animation-delay: 5.3s; }
+                                                .ri-3 { animation-delay: 5.6s; }
+
+                                                @keyframes item-appear {
+                                                    0% {
+                                                        opacity: 0;
+                                                        transform: translateY(10px);
+                                                    }
+                                                    100% {
+                                                        opacity: 1;
+                                                        transform: translateY(0);
+                                                    }
+                                                }
+                                            </style>
                     </div>
                 </div>
                                 
